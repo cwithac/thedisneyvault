@@ -1,0 +1,23 @@
+{
+  "name": "thedisneyvault",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwithac/thedisneyvault.git"
+  },
+  "author": "cathleen wright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cwithac/thedisneyvault/issues"
+  },
+  "homepage": "https://github.com/cwithac/thedisneyvault#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
