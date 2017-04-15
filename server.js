@@ -6,10 +6,12 @@ var express = require('express');
 var app = express();
 var port = 3000;
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 //MIDDLEWARE
 //---------------------------------
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended:false}));
 
 var usersController = require('./controllers/users.js');
 app.use('/users', usersController);
