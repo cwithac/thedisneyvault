@@ -27,6 +27,12 @@ app.use('/users', usersController);
 var sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 
+var filmsController = require('./controllers/films.js');
+app.use('/films', filmsController);
+
+var charactersController = require('./controllers/characters.js');
+app.use('/characters', charactersController);
+
 
 //ROOT ROUTE
 app.get('/', function(req, res){
