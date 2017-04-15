@@ -8,6 +8,7 @@ var port = 3000;
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var methodOverride = require('method-override');
 
 //MIDDLEWARE
 //---------------------------------
@@ -18,6 +19,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+app.use(methodOverride('_method'));
 
 var usersController = require('./controllers/users.js');
 app.use('/users', usersController);

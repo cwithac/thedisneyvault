@@ -17,7 +17,7 @@ res.render('users/register.ejs');
 //NEW USER REGISTRATION CREATION ROUTE
 router.post('/', function(req, res) {
   User.create(req.body, function(err, createdUser) {
-    res.redirect('/');
+    res.redirect('/sessions/signin');
   });
 });
 

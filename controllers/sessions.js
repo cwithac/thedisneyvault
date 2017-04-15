@@ -21,8 +21,15 @@ router.post('/', function(req, res) {
       req.session.currentUser = foundOneUser;
       res.redirect('/');
     } else {
-      res.send('Incorrect Password');
+      res.redirect('/users/register');
     }
+  });
+});
+
+//LOG OUT BUTTON DELETE ROUTE
+router.delete('/', function(req, res) {
+  req.session.destroy(function() {
+    res.redirect('/')
   });
 });
 

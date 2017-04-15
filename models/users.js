@@ -9,9 +9,10 @@ var Schema = mongoose.Schema;
 //---------------------------------
 
 var userSchema = Schema({
-    username: String,
-    password: String,
-    firstName: String
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    firstName: String,
+    characters: String //[CHARACTERS SCHEMA]
 });
 
 var User = mongoose.model('User', userSchema);
