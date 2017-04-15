@@ -16,6 +16,9 @@ app.use(bodyParser.urlencoded({extended:false}));
 var usersController = require('./controllers/users.js');
 app.use('/users', usersController);
 
+var sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
+
 
 //ROOT ROUTE
 app.get('/', function(req, res){
