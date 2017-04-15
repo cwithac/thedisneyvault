@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/users.js');
+var bcrypt = require('bcrypt');
 
 //ROUTES
 //---------------------------------
@@ -15,11 +16,15 @@ res.render('users/register.ejs');
 });
 
 //NEW USER REGISTRATION CREATION ROUTE
+//PASSWORD ENCRYPT ON CREATE USER
 router.post('/', function(req, res) {
+  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
   User.create(req.body, function(err, createdUser) {
-    res.redirect('/sessions/signin');
+    res.redirect('/');
   });
 });
+
+
 
 //LISTENERS
 //---------------------------------

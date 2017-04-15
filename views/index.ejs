@@ -9,7 +9,9 @@
       <ul>
         <% if (currentUser) { %>
           <h2>Welcome <%=currentUser.firstName%>!</h2>
-          <li><a href="#">Enter Site</a></li>
+          <li><a href="#">View Films</a></li>
+          <li><a href="#">View Characters</a></li>
+          <li><a href="#">Profile</a></li>
           <br/>
           <form action="/sessions?_method=DELETE" method="POST">
             <input type="submit" value="Log Out" />

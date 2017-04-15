@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/users.js');
+var bcrypt = require('bcrypt');
 
 //ROUTES
 //---------------------------------
@@ -15,9 +16,10 @@ router.get('/signin', function(req, res) {
 });
 
 //NEW SESSION LOGIN CREATE ROUTE
+//PASSWORD ENCRYPT ON CREATE USER
 router.post('/', function(req, res) {
   User.findOne({ username: req.body.username }, function(err, foundOneUser) {
-    if (req.body.password === foundOneUser.password) {
+    if (bcrypt.compareSync(req.body.password,foundOneUser.password)) {
       req.session.currentUser = foundOneUser;
       res.redirect('/');
     } else {
@@ -25,6 +27,7 @@ router.post('/', function(req, res) {
     }
   });
 });
+
 
 //LOG OUT BUTTON DELETE ROUTE
 router.delete('/', function(req, res) {
