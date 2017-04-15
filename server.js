@@ -10,6 +10,10 @@ var port = 3000;
 //---------------------------------
 app.use(express.static('public'));
 
+var usersController = require('./controllers/users.js');
+app.use('/users', usersController);
+
+
 //ROOT ROUTE
 app.get('/', function(req, res){
   res.render('index.ejs')
