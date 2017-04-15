@@ -28,7 +28,9 @@ app.use('/sessions', sessionsController);
 
 //ROOT ROUTE
 app.get('/', function(req, res){
-  res.render('index.ejs')
+  res.render('index.ejs', {
+    currentUser: req.session.currentUser
+  });
 });
 
 //LISTENERS

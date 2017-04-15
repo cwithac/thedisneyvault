@@ -7,8 +7,14 @@
     <h1>The Disney Vault</h1>
     <nav>
       <ul>
-        <li><a href="/sessions/signin">Sign In</a></li>
-        <li><a href="/users/register">Register</a></li>
+        <% if (currentUser) { %>
+          <h2>Welcome <%=currentUser.firstName%>!</h2>
+          <li><a href="/sessions/signin">View Films</a></li>
+          <li><a href="/users/register">View Characters</a></li>
+        <% } else { %>
+          <li><a href="/sessions/signin">Sign In</a></li>
+          <li><a href="/users/register">Register</a></li>
+        <% } %>
       </ul>
     </nav>
   </body>
