@@ -3,15 +3,26 @@
   <head>
 <% include ../partials/head %>
   </head>
-  <body>
-    <h1>The Disney Vault</h1>
-    <h2>This is the Register Page</h2>
+  <body id="home">
+    <nav>
+      <ul>
+          <li><a href="/sessions/signin">Sign In</a></li>
+          <li><a href="/users/register">Register</a></li>
+      </ul>
+    </nav>
+    <div id="titlelogo">
+      <h1 id="the">The</h1>
+      <img id="disneyvaulthome" src="../images/logo-disney-white.png"></img>
+      <h1 id="vault">Vault</h1>
+      </div>
+      <div id="loginform">
     <form action="/users" method="POST">
       <input type="text" name="firstName" placeholder="first name" />
       <input type="text" name="username" placeholder="username" />
       <input type="password" name="password" placeholder="password" />
+      <br/>
       <input type="submit" value="Register">
     </form>
-    <h3><a href="/sessions/signin">Sign in to an existing account</a></h3>
+    </div>
   </body>
 </html>

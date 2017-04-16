@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-body {
+#home {
   background: url('/images/balloonbw.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -17,7 +17,6 @@ body {
   position: absolute;
   bottom: 35%;
   max-width: 50%;
-  bottom: 35%;
   right: 15%;
 }
 
@@ -38,8 +37,13 @@ body {
   margin: 0 -1em 0 2em;
 }
 
-#logout {
-  
+#loginform {
+  text-align: right;
+  position: absolute;
+  bottom: 35%;
+  max-width: 50%;
+  bottom: 25%;
+  right: 15%;
 }
 
 nav {
@@ -71,7 +75,6 @@ li {
     position: absolute;
     bottom: 35%;
     width: 50%;
-    bottom: 35%;
     right: 35%;
   }
 
@@ -79,16 +82,16 @@ li {
     width: 200px;
     margin: -50px;
   }
+  #loginform {
+    display: block;
+    text-align: left;
+    bottom: 20%;
+  }
 }
 
 @media (max-width: 500px) {
   #titlelogo {
-    font-size: 10px;
-    text-align: right;
     position: absolute;
-    bottom: 35%;
-    width: 50%;
-    bottom: 35%;
     right: 50%;
   }
 
@@ -97,8 +100,6 @@ li {
     margin: -50px;
   }
   #vault {
-    display: inline;
-    color: white;
     margin: 0px -4em 0px 2em;
   }
 }

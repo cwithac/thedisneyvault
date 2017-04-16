@@ -20,7 +20,7 @@ res.render('users/register.ejs');
 router.post('/', function(req, res) {
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
   User.create(req.body, function(err, createdUser) {
-    res.redirect('/');
+    res.redirect('/sessions/signin');
   });
 });
 
