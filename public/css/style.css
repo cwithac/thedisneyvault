@@ -36,35 +36,36 @@
 }
 
 #disneyvaulthome {
+  display: block;
   max-width: 300px;
-  margin: -50px;
+  margin: -100px 100px;
 }
 
 #the {
-  display: inline;
+  position: absolute;
+  display: block;
   color: white;
-  margin: 0 1.5em 0 0;
+  margin: -100px 0px 0px 25px;
 }
 
 #vault {
-  display: inline;
+  position: absolute;
+  display: block;
   color: white;
-  margin: 0 -1em 0 2em;
+  margin: 25px 0px 0px 410px;
 }
 
 #loginform {
   color: white;
-  text-align: right;
+  text-align: left;
   position: absolute;
-  bottom: 35%;
-  max-width: 50%;
-  bottom: 20%;
+  bottom: 5%;
   right: 15%;
 }
 
 nav {
   background-color: rgba(40, 40, 40, .9);
-  padding: 5px 0;
+  padding: 5px 0px 0px 0px;
 }
 
 #filmchar-nav {
@@ -86,43 +87,50 @@ ul {
   justify-content: flex-end;
   padding: 0;
   list-style-type: none;
-
 }
 
 li {
   padding: 0 1em;
 }
 
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  background-color: rgba(40, 40, 40, .9);
+  font-size: 20px;
+  color: white;
+}
+
+#register {
+    margin-top: 15px;
+}
+
 @media (max-width: 830px) {
   #titlelogo {
-    font-size: 10px;
-    text-align: right;
-    position: absolute;
-    bottom: 35%;
-    width: 50%;
-    right: 35%;
+    right: 5%;
+    top: 5%;
+  }
+  #disneyvaulthome {
+    max-width: 200px;
+    margin: 0px 10px -45px 0;
   }
 
-  #disneyvaulthome {
-    width: 200px;
-    margin: -50px;
+  #the {
+    font-size: 20px;
+    margin: 10px 0px 0px -25px;
   }
-  #loginform {
-    bottom: 20%;
+
+  #vault {
+    font-size: 20px;
+    margin: 20px 0px 0px 120px;
   }
 }
 
-@media (max-width: 500px) {
-  #titlelogo {
+@media (max-width: 560px) {
+  #loginform {
+    color: white;
+    text-align: left;
     position: absolute;
-    right: 50%;
-  }
-
-  #disneyvaulthome {
-    width: 200px;
-    margin: -50px;
-  }
-  #vault {
-    margin: 0px -4em 0px 2em;
+    bottom: 5%;
+    right: 15%;
+    left: 5%;
   }
 }
