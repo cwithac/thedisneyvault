@@ -34,6 +34,30 @@ router.post('/', function(req, res) {
   });
 });
 
+//SHOW CHARACTERS
+router.get('/:id', function(req, res) {
+  Character.findById(req.params.id, function(err, foundACharacter) {
+    res.render('characters/show.ejs', {
+      character: foundACharacter
+    });
+  });
+});
+
+//EDIT/UPDATE CHARACTERS
+router.get('/:id/edit', function(req, res) {
+  Character.findById(req.params.id, function(err, foundACharacter) {
+    res.render('characters/edit.ejs', {
+      character: foundACharacter
+    });
+  });
+});
+
+router.put('/:id', function(req, res){
+  Character.findByIdAndUpdate(req.params.id, req.body, function() {
+    res.redirect('/characters')
+  });
+});
+
 //LISTENERS
 //---------------------------------
 module.exports = router;

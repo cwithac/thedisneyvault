@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<% include ../partials/head %>
+  </head>
+  <body class="filmsandcharacters">
+    <nav>
+      <ul>
+          <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+          <li><a href="/films">View Films</a></li>
+          <li><a href="/characters">View Characters</a></li>
+          <li><a href="#">Profile</a></li>
+          <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
+            <input class="logout" type="submit" value="Log Out" />
+          </form></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h1>Edit <%=character.name%></h1>
+      <section>
+        <form action="/characters/<%=character._id%>?_method=PUT"" method="POST">
+          <label for="name">Name</label>
+            <input class="u-full-width" type="text" name="name" value="<%=character.name%>"/><br/>
+            <label for="photo">Photo Image Address</label>
+            <input class="u-full-width" type="text" name="headshot" value="<%=character.headshot%>" />
+              <div class="row">
+                <div class="six columns">
+                  <label for="location">Setting</label>
+                  <input class="u-full-width" type="text" name="location" value="<%=character.location%>"/>
+                </div>
+                <div class="six columns">
+                  <label for="kind">Type</label>
+                  <input class="u-full-width" type="text" name="kind" value="<%=character.kind%>" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="six columns">
+                  <label for="quote">Quote</label>
+                  <input class="u-full-width" type="text" name="quote" value="<%=character.quote%>" />
+                </div>
+                <div class="six columns">
+                  <label for="enemy">Nemesis</label>
+                  <input class="u-full-width" type="text" name="enemy" value="<%=character.enemy%>" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="six columns">
+                  <label for="love">Love Interest</label>
+                  <input class="u-full-width" type="text" name="love" value="<%=character.love%>" />
+                </div>
+                <div class="six columns">
+                  <label for="friends">Sidekicks</label>
+                  <input class="u-full-width" type="text" name="friends" value="<%=character.friends%>"/>
+                </div>
+                </div>
+                <div>
+                  <label for="additional-photos">Additional Photos</label>
+                  <input class="u-full-width" type="text" name="additional" value="<%=character.additional%>"/>
+                </div>
+              </div>
+              <br/>
+            <input type="submit" value="Edit <%=character.name%>">
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

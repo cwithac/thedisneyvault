@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<% include ../partials/head %>
+  </head>
+  <body class="filmsandcharacters">
+    <nav>
+      <ul>
+          <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+          <li><a href="/films">View Films</a></li>
+          <li><a href="/characters">View Characters</a></li>
+          <li><a href="#">Profile</a></li>
+          <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
+            <input class="logout" type="submit" value="Log Out" />
+          </form></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h1><%=character.name%></h1>
+      <img class="headshot" src="<%=character.headshot%>"></img>
+    </br>
+      Setting: <%=character.location%>
+    </br>
+      Type: <%=character.kind%>
+    </br>
+      Quote: <%=character.quote%>
+    </br>
+      Nemsis: <%=character.enemy%>
+    </br>
+      Love Interest: <%=character.love%>
+    </br>
+      Sidekicks: <%=character.friends%>
+    </br>
+    </main>
+    <section>
+    <a href="/characters/<%=character._id%>/edit">Edit <%=character.name%></a>
+    </section>
+  </body>
+</html>
