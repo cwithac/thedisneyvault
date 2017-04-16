@@ -39,6 +39,12 @@ router.get('/:id', function(req, res) {
   });
 });
 
+router.delete('/:id', function(req, res) {
+  Films.findByIdAndRemove(req.params.id, function() {
+    res.redirect('/films');
+  });
+});
+
 //LISTENERS
 //---------------------------------
 module.exports = router;
