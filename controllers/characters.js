@@ -43,6 +43,13 @@ router.get('/:id', function(req, res) {
   });
 });
 
+//DELETE ROUTE
+router.delete('/:id', function(req, res) {
+  Character.findByIdAndRemove(req.params.id, function() {
+    res.redirect('/characters');
+  });
+});
+
 //EDIT/UPDATE CHARACTERS
 router.get('/:id/edit', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
