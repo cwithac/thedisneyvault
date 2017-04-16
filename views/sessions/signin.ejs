@@ -17,11 +17,17 @@
       </div>
       <div id="loginform">
         <form action="/sessions" method="POST">
-          <label for="user-name">Username</label>
-          <input type="text" name="username" /><br/>
-          <label for="password">Password</label>
-          <input type="password" name="password" /><br/>
-          <input type="submit" value="Sign In">
+          <div class="row">
+            <div class="six columns">
+              <label for="user-name">Username</label>
+              <input class="u-full-width" type="text" name="username" /><br/>
+            </div>
+            <div class="six columns">
+              <label for="password">Password</label>
+              <input class="u-full-width" type="password" name="password" /><br/>
+            </div>
+          </div>
+              <input id="signin" type="submit" value="Sign In">
         </form>
       </div>
   </body>

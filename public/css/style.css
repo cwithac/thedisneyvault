@@ -99,7 +99,7 @@ li {
   color: white;
 }
 
-#register {
+#register, #signin {
     margin-top: 15px;
 }
 
