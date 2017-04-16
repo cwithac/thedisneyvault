@@ -31,6 +31,14 @@ router.post('/', function(req, res) {
   });
 });
 
+router.get('/:id', function(req, res) {
+  Films.findById(req.params.id, function(err, foundOneFilm) {
+    res.render('films/show.ejs', {
+      film: foundOneFilm
+    });
+  });
+});
+
 //LISTENERS
 //---------------------------------
 module.exports = router;

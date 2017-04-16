@@ -101,7 +101,11 @@ li {
 }
 
 .poster {
-  max-height: 150px;
+  height: 150px;
+}
+
+.show-poster {
+  height: 400px;
 }
 
 @media (max-width: 830px) {
