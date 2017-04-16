@@ -9,10 +9,12 @@ var Films = require('../models/films.js');
 //ROUTES
 //---------------------------------
 
+//FILMS INDEX
 // router.get('/', function(req, res) {
 //   res.render('films/index.ejs')
 // });
 
+//FILMS INDEX UPDATED
 router.get('/', function(req, res) {
   Films.find({}, function(err, foundFilms){
     res.render('films/index.ejs', {
@@ -21,6 +23,7 @@ router.get('/', function(req, res) {
   });
 });
 
+//ADD FILMS
 router.get('/add', function(req, res) {
   res.render('films/new.ejs');
 });
@@ -31,6 +34,7 @@ router.post('/', function(req, res) {
   });
 });
 
+//SHOW FILMS
 router.get('/:id', function(req, res) {
   Films.findById(req.params.id, function(err, foundOneFilm) {
     res.render('films/show.ejs', {
@@ -39,11 +43,28 @@ router.get('/:id', function(req, res) {
   });
 });
 
+//DELETE FILMS
 router.delete('/:id', function(req, res) {
   Films.findByIdAndRemove(req.params.id, function() {
     res.redirect('/films');
   });
 });
+
+//UPDATE FILMS
+router.get('/:id/edit', function(req, res) {
+  Films.findById(req.params.id, function(err, foundOneFilm) {
+    res.render('films/edit.ejs', {
+      film: foundOneFilm
+    });
+  });
+});
+
+router.put('/:id', function(req, res) {
+  Films.findByIdAndUpdate(req.params.id, req.body, function() {
+    res.redirect('/films')
+  });
+});
+
 
 //LISTENERS
 //---------------------------------

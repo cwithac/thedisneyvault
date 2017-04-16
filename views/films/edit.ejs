@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<% include ../partials/head %>
+  </head>
+  <body class="filmsandcharacters">
+    <nav>
+      <ul>
+          <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+          <li><a href="/films">View Films</a></li>
+          <li><a href="/characters">View Characters</a></li>
+          <li><a href="#">Profile</a></li>
+          <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
+            <input class="logout" type="submit" value="Log Out" />
+          </form></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h1>Edit <%=film.title%></h1>
+      <section>
+        <form action="/films/<%=film._id%>?_method=PUT" method="POST">
+          <label for="title">Title</label>
+            <input class="u-full-width" type="text" name="title" value="<%=film.title%>"/><br/>
+            <label for="poster">Poster Image Address</label>
+            <input class="u-full-width" type="text" name="poster" value="<%=film.poster%>" />
+              <div class="row">
+                <div class="six columns">
+                  <label for="year">Release Year</label>
+                  <input class="u-full-width" type="text" name="year" value ="<%=film.year%>"/>
+                </div>
+                <div class="six columns">
+                  <label for="imdb-link">IMDB Page Address</label>
+                  <input class="u-full-width" type="text" name="imdb" value="<%=film.imdb%>"/>
+                </div>
+              </div>
+            <input type="submit" value="Update <%=film.title%>">
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
