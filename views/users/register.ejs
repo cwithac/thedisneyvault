@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-<% include ../partials/head %>
-  </head>
-  <body id="home">
-    <nav>
-      <ul>
-          <li><a href="/sessions/signin">Sign In</a></li>
-          <li><a href="/users/register">Register</a></li>
-      </ul>
-    </nav>
-    <div id="titlelogo">
-      <h1 id="the">The</h1>
-      <img id="disneyvaulthome" src="../images/logo-disney-white.png"></img>
-      <h1 id="vault">Vault</h1>
-      </div>
-      <div id="loginform">
+<head>
+  <% include ../partials/head %>
+</head>
+<body id="home">
+  <nav>
+    <ul>
+      <li><a href="/sessions/signin">Sign In</a></li>
+      <li><a href="/users/register">Register</a></li>
+    </ul>
+  </nav>
+  <div id="titlelogo">
+    <h1 id="the">The</h1>
+    <img id="disneyvaulthome" src="../images/logo-disney-white.png"></img>
+    <h1 id="vault">Vault</h1>
+  </div>
+  <div id="loginform">
     <form action="/users" method="POST">
-      <input type="text" name="firstName" placeholder="first name" />
-      <input type="text" name="username" placeholder="username" />
-      <input type="password" name="password" placeholder="password" />
-      <br/>
+      <label for="first-name">First Name</label>
+      <input type="text" name="firstName" /><br/>
+      <label for="user-name">Username</label>
+      <input type="text" name="username" /><br/>
+      <label for="password">Password</label>
+      <input type="password" name="password" /><br/>
       <input type="submit" value="Register">
     </form>
-    </div>
-  </body>
+  </div>
+</body>
 </html>

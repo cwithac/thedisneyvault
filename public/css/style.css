@@ -38,11 +38,12 @@
 }
 
 #loginform {
+  color: white;
   text-align: right;
   position: absolute;
   bottom: 35%;
   max-width: 50%;
-  bottom: 25%;
+  bottom: 20%;
   right: 15%;
 }
 
@@ -83,8 +84,6 @@ li {
     margin: -50px;
   }
   #loginform {
-    display: block;
-    text-align: left;
     bottom: 20%;
   }
 }
