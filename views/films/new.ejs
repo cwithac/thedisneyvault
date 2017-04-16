@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<% include ../partials/head %>
+  </head>
+  <body id="filmsandcharacters">
+    <nav>
+      <ul>
+          <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+          <li><a href="/films">View Films</a></li>
+          <li><a href="/characters">View Characters</a></li>
+          <li><a href="#">Profile</a></li>
+          <li id="logout"><form action="/sessions?_method=DELETE" method="POST">
+            <input id="logout" type="submit" value="Log Out" />
+          </form></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <h1>Add a Film to the Library</h1>
+      <section>
+        <form action="/films" method="POST">
+          <label class="black-text" for="title">Title</label>
+            <input class="u-full-width" type="text" name="title" /><br/>
+            <label class="black-text" for="poster">Poster Image Address</label>
+            <input class="u-full-width" type="text" name="poster" />
+              <div class="row">
+                <div class="six columns">
+                  <label class="black-text" for="year">Release Year</label>
+                  <input class="u-full-width" type="text" name="year" />
+                </div>
+                <div class="six columns">
+                  <label class="black-text" for="imdb-link">IMDB Page Address</label>
+                  <input class="u-full-width" type="text" name="imdb" />
+                </div>
+              </div>
+            <input type="submit" value="Add">
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

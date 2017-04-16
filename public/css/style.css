@@ -19,6 +19,8 @@
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Architects Daughter', cursive;
+  color: black;
+  text-align: center;
 }
 
 #titlelogo {
@@ -66,22 +68,35 @@ label {
   color: white;
 }
 
+.black-text {
+  color: black;
+}
+
 nav {
   background-color: rgba(40, 40, 40, .9);
   padding: 5px 0px 0px 0px;
 }
 
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: #0FA0CE;
+}
+
 #logout {
-  margin-bottom: -15px;
+  margin-bottom: -10px;
+  font-size: 14px;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
-.black-text {
-  color: black;
+a:hover {
+  color: white;
 }
 
 ul {
@@ -91,6 +106,16 @@ ul {
   list-style-type: none;
   margin-bottom: 0;
   align-items: center;
+}
+
+.index {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 li {
@@ -109,6 +134,10 @@ li {
 
 #register, #signin {
     margin-top: 15px;
+}
+
+.poster {
+  max-height: 150px;
 }
 
 @media (max-width: 830px) {

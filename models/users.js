@@ -12,7 +12,7 @@ var userSchema = Schema({
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     firstName: String,
-    characters: String //[CHARACTERS SCHEMA]
+    created: [] //[CHARACTERS SCHEMA]
 });
 
 var User = mongoose.model('User', userSchema);

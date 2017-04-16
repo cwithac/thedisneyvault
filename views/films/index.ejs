@@ -6,7 +6,7 @@
   <body id="filmsandcharacters">
     <nav>
       <ul>
-          <li><a class="black-text" href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+          <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
           <li><a href="/films">View Films</a></li>
           <li><a href="/characters">View Characters</a></li>
           <li><a href="#">Profile</a></li>
@@ -15,5 +15,17 @@
           </form></li>
       </ul>
     </nav>
+    <main class="container">
+      <h1>The Film Library</h1>
+      <a href="/films/add">Add Film to Library</a>
+      <br/>
+      <ul class="index">
+        <% for (var i = 0; i < films.length; i++) { %>
+          <li>
+              <a href="/films/<%=films[i]._id%>"><img class="poster" src="<%=films[i].poster%>"></a>
+          </li>
+      <% } %>
+      </ul>
+    </main>
   </body>
 </html>
