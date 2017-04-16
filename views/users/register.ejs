@@ -3,10 +3,10 @@
 <head>
   <% include ../partials/head %>
 </head>
-<body id="home">
+<body class="home">
   <nav>
     <ul>
-      <li><a class="black-text" href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+      <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
       <li><a href="/sessions/signin">Sign In</a></li>
       <li><a href="/users/register">Register</a></li>
     </ul>
@@ -16,7 +16,7 @@
     <img id="disneyvaulthome" src="../images/logo-disney-white.png"></img>
     <h1 id="vault">Vault</h1>
   </div>
-  <div id="loginform">
+  <div class="loginform">
     <form action="/users" method="POST">
       <label for="first-name">First Name</label>
         <input class="u-full-width" type="text" name="firstName" />
@@ -30,7 +30,7 @@
               <input class="u-full-width" type="password" name="password" /><br/>
             </div>
           </div>
-          <input id="register" type="submit" value="Register">
+          <input type="submit" value="Register">
     </form>
   </div>
 </body>

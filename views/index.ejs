@@ -3,15 +3,15 @@
   <head>
 <% include ../views/partials/head %>
   </head>
-  <body id="home">
+  <body class="home">
     <nav>
       <ul>
         <% if (currentUser) { %>
           <li><a href="/films">View Films</a></li>
           <li><a href="/characters">View Characters</a></li>
           <li><a href="#"><%=currentUser.firstName%>'s Profile</a></li>
-          <li id="logout"><form action="/sessions?_method=DELETE" method="POST">
-            <input id="logout" type="submit" value="Log Out" />
+          <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
+            <input class="logout" type="submit" value="Log Out" />
           </form></li>
         <% } else { %>
           <li><a href="/sessions/signin">Sign In</a></li>

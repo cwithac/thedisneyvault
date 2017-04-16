@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-#home {
+.home {
   background: url('/images/balloonbw.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -12,7 +12,7 @@
   font-family: 'Architects Daughter', cursive;
 }
 
-#filmsandcharacters {
+.filmsandcharacters {
   background: url('/images/cloudless-blue-sky-background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -56,20 +56,11 @@
   margin: 35px 0px 0px 410px;
 }
 
-#loginform {
-  color: black;
+.loginform {
   text-align: left;
   position: absolute;
   bottom: 5%;
   right: 15%;
-}
-
-label {
-  color: white;
-}
-
-.black-text {
-  color: black;
 }
 
 nav {
@@ -77,26 +68,13 @@ nav {
   padding: 5px 0px 0px 0px;
 }
 
-nav a {
-  color: white;
-}
-
-nav a:hover {
-  color: #0FA0CE;
-}
-
-#logout {
+.logout {
   margin-bottom: -10px;
   font-size: 14px;
 }
 
 a {
   text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: white;
 }
 
 ul {
@@ -120,20 +98,6 @@ ul {
 
 li {
   padding: 0 1em;
-}
-
-.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
-  background-color: rgba(40, 40, 40, .9);
-  font-size: 20px;
-  color: white;
-}
-
-#signin:hover, #logout:hover, #register:hover {
-  color: #0FA0CE;
-}
-
-#register, #signin {
-    margin-top: 15px;
 }
 
 .poster {
@@ -162,8 +126,7 @@ li {
 }
 
 @media (max-width: 560px) {
-  #loginform {
-    color: white;
+  .loginform {
     text-align: left;
     position: absolute;
     bottom: 5%;
