@@ -15,5 +15,17 @@
           </form></li>
       </ul>
     </nav>
+    <main class="container">
+      <h1>The Character Library</h1>
+      <a href="/characters/add">Add Character to Library</a>
+      <br/>
+      <ul class="index">
+        <% for (var i = 0; i < characters.length; i++) { %>
+          <li>
+              <a href="/characters/<%=characters[i]._id%>"><img class="headshot" src="<%=characters[i].headshot%>"></a>
+          </li>
+      <% } %>
+      </ul>
+    </main>
   </body>
 </html>
