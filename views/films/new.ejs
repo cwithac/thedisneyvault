@@ -10,13 +10,11 @@
     <main class="container">
       <h1>Add a Film to the Library</h1>
       <label for="title">Title</label>
-        <input class="u-full-width" type="text" name="title" /><br/>
-        <input type="submit" value="Search">
-      <section>
-        <form action="/films" method="POST">
-          <input type="submit" value="Add">
-        </form>
-      </section>
+        <input id="search-box" class="u-full-width" type="text" name="title" /><br/>
+        <p>Search for the full title...</p>
+        <button id="search-button">Search</button><br/>
+        <section id="search-results">
+        </section>
       <a href="/films/manualadd">Manually Add Film to Library</a>
     </main>
   </body>

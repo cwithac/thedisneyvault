@@ -81,8 +81,10 @@ li {
 .poster {
   min-width: 100px;
   min-height: 150px;
-  height: 150px;
-  background-color: black;
+  height: 200px;
+  background-color: white;
+  margin: 25px;
+  border: 1px solid black;
 }
 
 .library-character {
@@ -90,7 +92,7 @@ li {
   min-height: 150px;
   height: 150px;
   background-color: black;
-}
+  }
 
 .show-poster {
   min-width: 100px;
