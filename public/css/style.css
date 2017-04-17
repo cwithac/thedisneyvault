@@ -28,38 +28,10 @@ body {
   overflow: none;
 }
 
-
-#titlelogo {
-  text-align: right;
-  position: absolute;
-  bottom: 35%;
-  max-width: 50%;
-  right: 15%;
-}
-
 #navlogo {
   max-height: 20px;
   margin-bottom: -5px;
   border-radius: 10px;
-}
-
-#disneyvaulthome {
-  display: block;
-  max-width: 300px;
-  margin: -100px 100px;
-}
-
-#the {
-  position: absolute;
-  display: block;
-  color: white;
-  margin: -100px 0px 0px 25px;
-}
-
-#vault {
-  position: absolute;
-  color: white;
-  margin: 35px 0px 0px 410px;
 }
 
 .loginform {
@@ -107,6 +79,13 @@ li {
 }
 
 .poster {
+  min-width: 100px;
+  min-height: 150px;
+  height: 150px;
+  background-color: black;
+}
+
+.library-character {
   min-width: 100px;
   min-height: 150px;
   height: 150px;
