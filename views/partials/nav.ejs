@@ -3,7 +3,7 @@
     <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
     <li><a href="/films">View Films</a></li>
     <li><a href="/characters">View Characters</a></li>
-    <li><a href="#">Profile</a></li>
+    <li><a href="#"><%=currentUser.firstName%>'s Profile</a></li>
     <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
       <input class="logout" type="submit" value="Log Out" />
     </form></li>
