@@ -107,40 +107,15 @@ li {
 }
 
 .poster {
+  min-width: 100px;
+  min-height: 150px;
   height: 150px;
+  background-color: black;
 }
 
 .show-poster {
+  min-width: 100px;
+  min-height: 100px;
   height: 400px;
-}
-
-@media (max-width: 830px) {
-  #titlelogo {
-    right: 5%;
-    top: 5%;
-  }
-  #disneyvaulthome {
-    max-width: 200px;
-    margin: 0px 10px -45px 0;
-  }
-
-  #the {
-    font-size: 20px;
-    margin: 10px 0px 0px -25px;
-  }
-
-  #vault {
-    font-size: 20px;
-    margin: 20px 0px 0px 120px;
-  }
-}
-
-@media (max-width: 560px) {
-  .loginform {
-    text-align: left;
-    position: absolute;
-    bottom: 5%;
-    right: 15%;
-    left: 5%;
-  }
+  background-color: black;
 }
