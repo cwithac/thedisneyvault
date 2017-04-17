@@ -26,7 +26,12 @@ router.post('/', function(req, res) {
   });
 });
 
-
+//SHOW USER PROFILE
+router.get('/profile', function(req, res) {
+  res.render('users/profile.ejs', {
+    currentUser: req.session.currentUser
+  });
+});
 
 //LISTENERS
 //---------------------------------
