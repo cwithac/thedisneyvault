@@ -4,11 +4,14 @@
 //---------------------------------
 var express = require('express');
 var app = express();
-var port = 3000;
+
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
+
+var port = process.env.PORT || 3000;
+var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/thedisneyvault';
 
 //MIDDLEWARE
 //---------------------------------
@@ -44,12 +47,12 @@ app.get('/', function(req, res){
 //LISTENERS
 //---------------------------------
 
-mongoose.connect('mongodb://localhost:27017/thedisneyvault');
+mongoose.connect(mongoDBURI);
 
 mongoose.connection.once('open', function() {
   console.log('server.js is connected to mongo');
 });
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log('server.js is listening to port ' + port);
 });
