@@ -4,20 +4,17 @@
 }
 
 .home {
-  background: url('/images/balloonbw.jpg') no-repeat center center fixed;
+  background: url('/images/up_balloon_house.jpeg') no-repeat left center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Architects Daughter', cursive;
+  overflow: none;
 }
 
 .filmsandcharacters {
-  background: url('/images/cloudless-blue-sky-background.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #357DBB;
   font-family: 'Architects Daughter', cursive;
   color: black;
   text-align: center;
