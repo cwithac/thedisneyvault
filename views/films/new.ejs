@@ -9,26 +9,15 @@
     </nav>
     <main class="container">
       <h1>Add a Film to the Library</h1>
-      <a href="/films/manualadd">Manually Add Film to Library</a>
+      <label for="title">Title</label>
+        <input class="u-full-width" type="text" name="title" /><br/>
+        <input type="submit" value="Search">
       <section>
         <form action="/films" method="POST">
-          <label for="title">Title</label>
-            <input class="u-full-width" type="text" name="title" /><br/>
-            <label for="poster">Poster Image Address</label>
-            <input class="u-full-width" type="text" name="poster" />
-              <div class="row">
-                <div class="six columns">
-                  <label for="year">Release Year</label>
-                  <input class="u-full-width" type="text" name="year" />
-                </div>
-                <div class="six columns">
-                  <label for="imdb-link">IMDB Page Address</label>
-                  <input class="u-full-width" type="text" name="imdb" />
-                </div>
-              </div>
-            <input type="submit" value="Add">
+          <input type="submit" value="Add">
         </form>
       </section>
+      <a href="/films/manualadd">Manually Add Film to Library</a>
     </main>
   </body>
 </html>
