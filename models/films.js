@@ -3,11 +3,13 @@
 //DEPENDENCIES
 //---------------------------------
 var mongoose = require('mongoose');
+
 var filmSchema = mongoose.Schema({
-    title: { type: String, required: true },
-    poster: { type: String },
-    year: { type: Number, min: 1900, max: 2020 },
-    imdb: { type: String },
+    Title: { type: String },
+    Poster: { type: String },
+    Year: { type: Number, min: 1900, max: 2020 },
+    Plot: { type: String },
+    Imdb: { type: String },
     characters: [] //[CHARACTERS SCHEMA]
 });
 
