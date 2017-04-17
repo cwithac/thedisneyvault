@@ -33,14 +33,7 @@ router.get('/add', function(req, res) {
     });
   });
 });
-//MANUAL ADD FILMS
-router.get('/manualadd', function(req, res) {
-  User.find({}, function(err, currentUser) {
-    res.render('films/manualnew.ejs', {
-      currentUser: req.session.currentUser
-    });
-  });
-});
+
 
 router.post('/', function(req, res) {
   Films.create(req.body, function(err, createdFilm) {
