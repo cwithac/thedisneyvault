@@ -10,6 +10,15 @@ body {
   text-align: center;
 }
 
+.clouds {
+  background: url('/images/clouds.png') no-repeat left center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: none;
+}
+
 .home {
   background: url('/images/up_balloon_house.jpeg') no-repeat left center fixed;
   -webkit-background-size: cover;
