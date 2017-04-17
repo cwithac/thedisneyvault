@@ -45,11 +45,19 @@ var findFilms = function() {
       }
     }
     $searchBox.val('');
-    addButtonClicked();
   })
 };
 
 var addButtonClicked = function() {
   console.log("imdbID: " + this.id);
-
+   $.ajax('https://www.omdbapi.com/?i=' + this.id + '&y=&plot=short&r=json')
+   .done(function(selectedFilm) {
+     $.ajax({
+        method: 'POST',
+        url: '/films',
+        data: selectedFilm
+      }).done(function(response) {
+        window.location.href = '/films/';
+      })
+   })
 };
