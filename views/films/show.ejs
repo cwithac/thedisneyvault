@@ -5,15 +5,7 @@
   </head>
   <body class="filmsandcharacters">
     <nav>
-      <ul>
-          <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
-          <li><a href="/films">View Films</a></li>
-          <li><a href="/characters">View Characters</a></li>
-          <li><a href="#">Profile</a></li>
-          <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
-            <input class="logout" type="submit" value="Log Out" />
-          </form></li>
-      </ul>
+      <% include ../partials/nav %>
     </nav>
     <main class="container">
       <h1><%=film.title%></h1>

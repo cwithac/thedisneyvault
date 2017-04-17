@@ -12,7 +12,9 @@ var bcrypt = require('bcrypt');
 
 //NEW SESSION LOGIN ROUTE
 router.get('/signin', function(req, res) {
-  res.render('sessions/signin.ejs')
+  res.render('sessions/signin.ejs', {
+    currentUser: req.session.currentUser
+  });
 });
 
 //NEW SESSION LOGIN CREATE ROUTE

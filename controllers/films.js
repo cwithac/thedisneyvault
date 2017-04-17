@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var Films = require('../models/films.js');
+var User = require('../models/users.js');
 
 //ROUTES
 //---------------------------------
@@ -18,6 +19,7 @@ var Films = require('../models/films.js');
 router.get('/', function(req, res) {
   Films.find({}, function(err, foundFilms){
     res.render('films/index.ejs', {
+      currentUser: req.session.currentUser,
       films: foundFilms
     });
   });
@@ -25,7 +27,11 @@ router.get('/', function(req, res) {
 
 //ADD FILMS
 router.get('/add', function(req, res) {
-  res.render('films/new.ejs');
+  User.find({}, function(err, currentUser) {
+    res.render('films/new.ejs', {
+      currentUser: req.session.currentUser
+    });
+  });
 });
 
 router.post('/', function(req, res) {
@@ -38,6 +44,7 @@ router.post('/', function(req, res) {
 router.get('/:id', function(req, res) {
   Films.findById(req.params.id, function(err, foundOneFilm) {
     res.render('films/show.ejs', {
+      currentUser: req.session.currentUser,
       film: foundOneFilm
     });
   });
@@ -54,6 +61,7 @@ router.delete('/:id', function(req, res) {
 router.get('/:id/edit', function(req, res) {
   Films.findById(req.params.id, function(err, foundOneFilm) {
     res.render('films/edit.ejs', {
+      currentUser: req.session.currentUser,
       film: foundOneFilm
     });
   });

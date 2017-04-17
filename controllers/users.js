@@ -12,7 +12,9 @@ var bcrypt = require('bcrypt');
 
 //NEW USER REGISTER ROUTE
 router.get('/register', function(req, res) {
-res.render('users/register.ejs');
+res.render('users/register.ejs', {
+  currentUser: req.session.currentUser
+  });
 });
 
 //NEW USER REGISTRATION CREATION ROUTE

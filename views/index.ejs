@@ -5,18 +5,7 @@
   </head>
   <body class="home">
     <nav>
-      <ul>
-        <% if (currentUser) { %>
-          <li><a href="/films">View Films</a></li>
-          <li><a href="/characters">View Characters</a></li>
-          <li><a href="#"><%=currentUser.firstName%>'s Profile</a></li>
-          <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
-            <input class="logout" type="submit" value="Log Out" />
-          </form></li>
-        <% } else { %>
-          <li><a href="/sessions/signin">Sign In</a></li>
-          <li><a href="/users/register">Register</a></li>
-        <% } %>
+<% include ../views/partials/nav %>
       </ul>
     </nav>
     <div>

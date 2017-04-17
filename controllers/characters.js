@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 var Character = require('../models/characters.js');
+var User = require('../models/users.js');
 
 //ROUTES
 //---------------------------------
@@ -18,6 +19,7 @@ var Character = require('../models/characters.js');
 router.get('/', function(req, res) {
   Character.find({}, function(err, foundCharacters){
     res.render('characters/index.ejs', {
+          currentUser: req.session.currentUser,
           characters: foundCharacters
     });
   });
@@ -25,7 +27,11 @@ router.get('/', function(req, res) {
 
 //ADD CHARACTERS
 router.get('/add', function(req, res) {
-  res.render('characters/new.ejs');
+  User.find({}, function(err, currentUser) {
+    res.render('characters/new.ejs', {
+      currentUser: req.session.currentUser
+    });
+  });
 });
 
 router.post('/', function(req, res) {
@@ -38,6 +44,7 @@ router.post('/', function(req, res) {
 router.get('/:id', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
     res.render('characters/show.ejs', {
+      currentUser: req.session.currentUser,
       character: foundACharacter
     });
   });
@@ -54,6 +61,7 @@ router.delete('/:id', function(req, res) {
 router.get('/:id/edit', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
     res.render('characters/edit.ejs', {
+      currentUser: req.session.currentUser,
       character: foundACharacter
     });
   });
