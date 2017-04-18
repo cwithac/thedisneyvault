@@ -25,14 +25,14 @@ router.get('/', function(req, res) {
   });
 });
 
-//ADD FILMS
-router.get('/add', function(req, res) {
-  User.find({}, function(err, currentUser) {
-    res.render('films/new.ejs', {
-      currentUser: req.session.currentUser
-    });
-  });
-});
+// //ADD FILMS
+// router.get('/add', function(req, res) {
+//   User.find({}, function(err, currentUser) {
+//     res.render('films/new.ejs', {
+//       currentUser: req.session.currentUser
+//     });
+//   });
+// });
 
 
 router.post('/', function(req, res) {
@@ -58,21 +58,21 @@ router.delete('/:id', function(req, res) {
   });
 });
 
-//UPDATE FILMS
-router.get('/:id/edit', function(req, res) {
-  Films.findById(req.params.id, function(err, foundOneFilm) {
-    res.render('films/edit.ejs', {
-      currentUser: req.session.currentUser,
-      film: foundOneFilm
-    });
-  });
-});
-
-router.put('/:id', function(req, res) {
-  Films.findByIdAndUpdate(req.params.id, req.body, function() {
-    res.redirect('/films')
-  });
-});
+// //UPDATE FILMS
+// router.get('/:id/edit', function(req, res) {
+//   Films.findById(req.params.id, function(err, foundOneFilm) {
+//     res.render('films/edit.ejs', {
+//       currentUser: req.session.currentUser,
+//       film: foundOneFilm
+//     });
+//   });
+// });
+//
+// router.put('/:id', function(req, res) {
+//   Films.findByIdAndUpdate(req.params.id, req.body, function() {
+//     res.redirect('/films')
+//   });
+// });
 
 
 //LISTENERS

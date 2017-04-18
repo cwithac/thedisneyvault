@@ -122,10 +122,6 @@ li {
   padding: 0 1em;
 }
 
-p {
-  margin-top: -25px;
-}
-
 .centerfooter {
   justify-content: center;
 }
@@ -141,7 +137,8 @@ p {
 
 .poster {
   height: 150px;
-  margin: 25px;
+  margin: 10px;
+  margin-bottom: 0;
 }
 
 .library-character {
