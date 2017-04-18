@@ -8,5 +8,12 @@
 <% include ../partials/nav %>
     </nav>
       <h1><%=currentUser.firstName%>'s Profile</h1>
+      <ul>
+        <% for (var i = 0; i < characters.length; i++) { %>
+          <li>
+            <a href="/characters/<%=characters[i]._id%>"><%=characters[i].name%></a>
+          </li>
+      <%  } %>
+      </ul>
   </body>
 </html>

@@ -6,6 +6,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/users.js');
 var bcrypt = require('bcrypt');
+var Character = require('../models/characters.js');
 
 //ROUTES
 //---------------------------------
@@ -35,8 +36,11 @@ router.post('/', function(req, res) {
 
 //SHOW USER PROFILE
 router.get('/profile', function(req, res) {
-  res.render('users/profile.ejs', {
-    currentUser: req.session.currentUser
+  Character.find({}, function(err, foundCharacters) {
+    res.render('users/profile.ejs', {
+      currentUser: req.session.currentUser,
+      characters: foundCharacters
+    });
   });
 });
 
