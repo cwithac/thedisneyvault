@@ -10,47 +10,62 @@
     <main class="container">
       <h1>Edit <%=character.name%></h1>
       <section>
-        <form action="/characters/<%=character._id%>?_method=PUT"" method="POST">
-          <label for="name">Name</label>
-            <input class="u-full-width" type="text" name="name" value="<%=character.name%>"/><br/>
-            <label for="photo">Photo Image Address</label>
-            <input class="u-full-width" type="text" name="headshot" value="<%=character.headshot%>" />
-              <div class="row">
-                <div class="six columns">
-                  <label for="location">Setting</label>
-                  <input class="u-full-width" type="text" name="location" value="<%=character.location%>"/>
-                </div>
-                <div class="six columns">
-                  <label for="kind">Type</label>
-                  <input class="u-full-width" type="text" name="kind" value="<%=character.kind%>" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="six columns">
-                  <label for="quote">Quote</label>
-                  <input class="u-full-width" type="text" name="quote" value="<%=character.quote%>" />
-                </div>
-                <div class="six columns">
-                  <label for="enemy">Nemesis</label>
-                  <input class="u-full-width" type="text" name="enemy" value="<%=character.enemy%>" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="six columns">
-                  <label for="love">Love Interest</label>
-                  <input class="u-full-width" type="text" name="love" value="<%=character.love%>" />
-                </div>
-                <div class="six columns">
-                  <label for="friends">Sidekicks</label>
-                  <input class="u-full-width" type="text" name="friends" value="<%=character.friends%>"/>
-                </div>
-                </div>
-                <div>
-                  <label for="additional-photos">Additional Photos</label>
-                  <input class="u-full-width" type="text" name="additional" value="<%=character.additional%>"/>
-                </div>
-              </div>
-              <br/>
+        <form action="/characters/<%=character._id%>?_method=PUT" method="POST">
+          <div class="row">
+            <div class="six columns">
+              <label for="name">Name</label>
+              <input id="name" class="u-full-width" type="text" name="name" value="<%=character.name%>" /><br/>
+            </div>
+            <div class="six columns">
+              <label for="film">Film</label>
+              <select name="filmId" id="film" />
+              <% for (var i = 0; i < films.length; i++) { %>
+                <option value="<%=films[i]._id%>"><%=films[i].Title%></option>
+                <% } %>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="six columns">
+              <label for="photo">Photo Image Address</label>
+              <input id="photo" class="u-full-width" type="text" name="headshot" value="<%=character.headshot%>"/>
+            </div>
+            <div class="six columns">
+              <label for="location">Setting</label>
+              <input id="location" class="u-full-width" type="text" name="location" value="<%=character.location%>" />
+            </div>
+            <label for="kind">Type</label>
+            <div class="radios" >
+              <div class="radio">Hero<input id="kind" class="u-full-width" type="radio" name="kind" value="Hero" /></div>
+              <div class="radio">Villain<input id="kind" class="u-full-width" type="radio" name="kind" value="Villain" /></div>
+              <div class="radio">Sidekick<input id="kind" class="u-full-width" type="radio" name="kind" value="Sidekick" /></div>
+              <div class="radio">Love Interest<input id="kind" class="u-full-width" type="radio" name="kind" value="Love Interest" /></div>
+              <div class="radio">Other<input id="kind" class="u-full-width" type="radio" name="kind" value="Other" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <label for="quote">Quote</label>
+            <input id="quote" class="u-full-width" type="text" name="quote" value="<%=character.quote%>"/>
+          </div>
+          <div class="six columns">
+            <label for="enemy">Nemesis</label>
+            <input id="enemy" class="u-full-width" type="text" name="enemy" value="<%=character.enemy%>"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <label for="love">Love Interest</label>
+            <input id="love" class="u-full-width" type="text" name="love" value="<%=character.love%>"/>
+          </div>
+          <div class="six columns">
+            <label for="friends">Sidekicks</label>
+            <input id="friends" class="u-full-width" type="text" name="friends" value="<%=character.friends%>"/>
+          </div>
+        </div>
+      </div>
+      <br/>
             <input type="submit" value="Edit <%=character.name%>">
         </form>
       </section>

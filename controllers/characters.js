@@ -47,9 +47,12 @@ router.post('/', function(req, res) {
 //SHOW CHARACTERS
 router.get('/:id', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
-    res.render('characters/show.ejs', {
-      currentUser: req.session.currentUser,
-      character: foundACharacter
+    Films.find({}, function(err, allFilms) {
+      res.render('characters/show.ejs', {
+        currentUser: req.session.currentUser,
+        character: foundACharacter,
+        films: allFilms
+      })
     });
   });
 });
@@ -64,9 +67,12 @@ router.delete('/:id', function(req, res) {
 //EDIT/UPDATE CHARACTERS
 router.get('/:id/edit', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
-    res.render('characters/edit.ejs', {
-      currentUser: req.session.currentUser,
-      character: foundACharacter
+    Films.find({}, function(err, allFilms) {
+      res.render('characters/edit.ejs', {
+        currentUser: req.session.currentUser,
+        character: foundACharacter,
+        films: allFilms
+      })
     });
   });
 });
