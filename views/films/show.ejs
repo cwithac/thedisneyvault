@@ -19,6 +19,9 @@
       <div>
         <h2>Characters in this Film: </h2>
         <ul>
+            <% for(var i = 0; i < film.characters.length; i++){ %>
+                <li><a href="/characters/<%=film.characters[i]._id%>"><%=film.characters[i].name%></a></li>
+            <% } %>
         </ul>
       </div>
     </main>

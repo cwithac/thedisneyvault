@@ -25,14 +25,14 @@ router.get('/', function(req, res) {
   });
 });
 
-// //ADD FILMS
-// router.get('/add', function(req, res) {
-//   User.find({}, function(err, currentUser) {
-//     res.render('films/new.ejs', {
-//       currentUser: req.session.currentUser
-//     });
-//   });
-// });
+//ADD FILMS
+router.get('/add', function(req, res) {
+  User.find({}, function(err, currentUser) {
+    res.render('films/new.ejs', {
+      currentUser: req.session.currentUser
+    });
+  });
+});
 
 
 router.post('/', function(req, res) {
