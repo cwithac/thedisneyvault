@@ -7,7 +7,7 @@
     <nav>
       <% include ../partials/nav %>
     </nav>
-    <main class="container">
+    <main class="showcontainer" class="container">
 
       <div class="filmshow">
         <div>
@@ -26,10 +26,11 @@
             <% } %>
         </ul>
       </div>
+      </div>
     </main>
     <footer>
       <ul class="centerfooter">
-        <li><a  href="/films/add">Add Film to Library</a></li>
+        <li><a  href="/films/add">Add Film</a></li>
         <li class="logout"><form action="/films/<%=film._id%>?_method=DELETE" method="POST">
           <input class="logout" type="submit" value="Delete <%=film.title%>">
         </form></li>

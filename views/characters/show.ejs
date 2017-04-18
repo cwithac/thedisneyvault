@@ -7,11 +7,13 @@
     <nav>
       <% include ../partials/nav %>
     </nav>
-    <main class="container">
-      <div>
-        <img class="headshot" src="<%=character.headshot%>"></img>
-      </div>
-      <div>
+    <main class="charcontainer" class="container">
+
+      <div class="charshow">
+        <div>
+          <img class="char-poster" src="<%=character.headshot%>"></img>
+        </div>
+      <div class="charcontent">
         <h1><%=character.name%></h1>
       </br>
         Film: <a href="/films/<%=film._id%>"><%=film.Title%></a>
@@ -19,19 +21,20 @@
         Setting: <%=character.location%>
       </br>
         Type: <%=character.kind%>
-      </br>
-        Quote: <%=character.quote%>
-      </br>
+            </br>
         Nemsis: <%=character.enemy%>
       </br>
         Love Interest: <%=character.love%>
       </br>
         Sidekicks: <%=character.friends%>
+      </br>
+        <span class="quote"><%=character.quote%></span>
+      </div>
       </div>
     </main>
     <footer>
       <ul class="centerfooter">
-        <li><a href="/characters/add">Add Character to Library</a></li>
+        <li><a href="/characters/add">Add Character</a></li>
         <li><a href="/characters/<%=character._id%>/edit">Edit <%=character.name%></a></li>
         <li class="logout"><form action="/characters/<%=character._id%>?_method=DELETE" method="POST">
           <input class="logout" type="submit" value="Delete <%=character.name%>">

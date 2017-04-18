@@ -160,7 +160,14 @@ li {
 .show-poster {
   min-width: 100px;
   min-height: 100px;
+  max-height: 475px;
   max-width: 400px;
+  padding: 5%;
+}
+
+.char-poster {
+  min-height: 300px;
+  max-height: 300px;
   padding: 5%;
 }
 
@@ -195,14 +202,33 @@ li {
   margin-top: 10%;
 }
 
+.charshow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  justify-content: space-between;
+}
+
 .filmcontent {
   text-align: right;
   padding-right: 2%;
 }
 
-.container {
+.charcontent {
+  text-align: right;
+  padding-right: 2%;
+}
+
+.showcontainer {
   background-color: rgba(255, 255, 255, .8);
   width: 95%;
+  margin-left: 2.5%;
+}
+
+.charcontainer {
+  background-color: rgba(255, 255, 255, .8);
+  width: 75%;
+  margin-left: 12.5%;
 }
 
 h2 {
@@ -213,6 +239,11 @@ p {
   line-height: 1em;
   margin-left: 20%;
   font-size: 30px;
+}
+
+.quote {
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 40px;
 }
 
 /*RESPONSIVE*/
@@ -228,7 +259,7 @@ p {
     margin-left: 10%;
     font-size: 20px;
   }
-  .show-poster {
+  .show-poster, .char-poster {
     max-width: 200px;
   }
 }
@@ -245,10 +276,10 @@ p {
 }
 
 @media (max-width: 550px) {
-  .filmcontent {
+  .filmcontent, .charcontent {
     text-align: center;
   }
-  .filmshow {
+  .filmshow, .charshow {
     display: block;
   }
   p {
