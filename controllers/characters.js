@@ -47,6 +47,9 @@ router.get('/add', function(req, res) {
 });
 
 router.post('/', function(req, res) {
+  if (req.body.headshot === "") {
+    req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
+  }
   Films.findById(req.body.filmId, function(err, foundOneFilm){
     Character.create(req.body, function(err, createdCharacter) {
       foundOneFilm.characters.push(createdCharacter);
