@@ -88,8 +88,14 @@ router.get('/:id/edit', function(req, res) {
 });
 
 router.put('/:id', function(req, res){
-  Character.findByIdAndUpdate(req.params.id, req.body, function() {
-    res.redirect('/characters')
+  Character.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedCharacter) {
+    Films.findOne({ 'characters._id' : req.params.id }, function(err, foundOneFilm) {
+      foundOneFilm.characters.id(req.params.id).remove();
+      foundOneFilm.characters.push(updatedCharacter);
+      foundOneFilm.save(function(err, data){
+        res.redirect('/characters/' + req.params.id);
+      });
+    });
   });
 });
 
