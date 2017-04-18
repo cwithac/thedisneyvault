@@ -21,9 +21,13 @@ router.get('/signin', function(req, res) {
 //PASSWORD ENCRYPT ON CREATE USER
 router.post('/', function(req, res) {
   User.findOne({ username: req.body.username }, function(err, foundOneUser) {
-    if (bcrypt.compareSync(req.body.password,foundOneUser.password)) {
-      req.session.currentUser = foundOneUser;
-      res.redirect('/');
+    if (foundOneUser !== null) {
+      if (bcrypt.compareSync(req.body.password, foundOneUser.password)) {
+        req.session.currentUser = foundOneUser;
+        res.redirect('/');
+      } else {
+        res.redirect('/users/register');
+      }
     } else {
       res.redirect('/users/register');
     }

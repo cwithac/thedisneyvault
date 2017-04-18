@@ -16,10 +16,15 @@
       <%=film.Plot%>
     </main>
     <section>
-      <form action="/films/<%=film._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete <%=film.title%>">
-      </form>
 
     </section>
+    <footer>
+      <ul class="centerfooter">
+        <li><a  href="/films/add">Add Film to Library</a></li>
+        <li class="logout"><form action="/films/<%=film._id%>?_method=DELETE" method="POST">
+          <input class="logout" type="submit" value="Delete <%=film.title%>">
+        </form></li>
+      </ul>
+    </footer>
   </body>
 </html>

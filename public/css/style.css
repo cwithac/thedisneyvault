@@ -5,7 +5,7 @@
 
 body {
   background-color: #357DBB;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'IM Fell Great Primer SC', serif;
   color: black;
   text-align: center;
 }
@@ -28,10 +28,30 @@ body {
   overflow: none;
 }
 
+h1 {
+font-family: 'WaltographRegular';
+font-weight: normal;
+font-style: normal;
+margin-top: 5%;
+}
+
 #navlogo {
   max-height: 20px;
   margin-bottom: -5px;
   border-radius: 10px;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, .75);
+  padding: 5px 0px 0px 0px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 0px 5px 0px;
+  width: 100%;
 }
 
 .loginform {
@@ -41,18 +61,33 @@ body {
   right: 15%;
 }
 
-nav {
-  background-color: rgba(40, 40, 40, .9);
-  padding: 5px 0px 0px 0px;
-}
-
 .logout {
   margin-bottom: -10px;
   font-size: 14px;
 }
 
+.thedisneyvault {
+position: fixed;
+font-size: 125px;
+bottom: 25%;
+left: 50%;
+}
+
+span {
+  font-size: 50px;
+}
+
+.top {
+  vertical-align: top;
+}
+
+.bottom {
+  vertical-align: bottom;
+}
+
 a {
   text-decoration: none;
+  color: black;
 }
 
 ul {
@@ -78,6 +113,19 @@ li {
   padding: 0 1em;
 }
 
+.centerfooter {
+  justify-content: center;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  color: white;
+  background-color: black;
+}
+
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
+  color: #357DBB;
+}
+
 .poster {
   min-width: 100px;
   min-height: 150px;
@@ -100,3 +148,35 @@ li {
   height: 400px;
   background-color: black;
 }
+
+/*RESPONSIVE*/
+
+@media (max-width: 850px) {
+  .thedisneyvault {
+    left: 0;
+    top: 10%;
+    /*margin-right: 25px;*/
+    right: 10%;
+    }
+  }
+
+@media (max-width: 715px) {
+  .loginform {
+    text-align: left;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    left: 15%;
+    color: white;
+  }
+}
+
+@media (max-width: 420px) {
+  .thedisneyvault {
+    font-size: 100px;
+    }
+    span {
+      font-size: 25px;
+      margin-right: 20px;
+    }
+  }

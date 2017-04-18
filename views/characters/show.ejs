@@ -24,13 +24,14 @@
       Sidekicks: <%=character.friends%>
     </br>
     </main>
-    <section>
-    <a href="/characters/<%=character._id%>/edit">Edit <%=character.name%></a>
-    </section>
-    <section>
-      <form action="/characters/<%=character._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete <%=character.name%>">
-      </form>
-    </section>
+    <footer>
+      <ul class="centerfooter">
+        <li><a href="/characters/add">Add Character to Library</a></li>
+        <li><a href="/characters/<%=character._id%>/edit">Edit <%=character.name%></a></li>
+        <li class="logout"><form action="/characters/<%=character._id%>?_method=DELETE" method="POST">
+          <input class="logout" type="submit" value="Delete <%=character.name%>">
+        </form></li>
+      </ul>
+    </footer>
   </body>
 </html>
