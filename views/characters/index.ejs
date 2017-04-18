@@ -8,12 +8,14 @@
       <% include ../partials/nav %>
     </nav>
     <main class="container">
-      <h1>The Character Library</h1>
+      <h1 class="h1big">The Character Library</h1>
       <br/>
       <ul class="index">
         <% for (var i = 0; i < characters.length; i++) { %>
           <li>
+            <div class="charindexpage">
               <a href="/characters/<%=characters[i]._id%>"><img class="library-character" src="<%=characters[i].headshot%>"></a>
+            </div>
           </li>
       <% } %>
       </ul>
