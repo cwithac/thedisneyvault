@@ -12,8 +12,7 @@ var charSchema = mongoose.Schema({
     enemy: { type: String },
     love: { type: String },
     friends: Array,
-    additional: Array,
-    movie: [] //[FILM SCHEMA]
+    additional: Array
 });
 
 var Character = mongoose.model('Character', charSchema);

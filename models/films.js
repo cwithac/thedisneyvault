@@ -9,8 +9,7 @@ var filmSchema = mongoose.Schema({
     Poster: { type: String },
     Year: { type: Number, min: 1900, max: 2020 },
     Plot: { type: String },
-    Imdb: { type: String },
-    characters: [] //[CHARACTERS SCHEMA]
+    Imdb: { type: String }
 });
 
 var Film = mongoose.model('Film', filmSchema);

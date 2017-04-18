@@ -40,7 +40,7 @@ margin-top: 5%;
   margin-bottom: 0;
 }
 
-div {
+.indexpage {
   background-color: rgba(255, 255, 255, .8);
 }
 
@@ -153,6 +153,13 @@ li {
   min-height: 100px;
   height: 400px;
   background-color: black;
+}
+
+.radios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 /*RESPONSIVE*/

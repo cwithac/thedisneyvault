@@ -12,8 +12,9 @@
       <br/>
         <ul class="index">
           <% for (var i = 0; i < films.length; i++) { %>
+           <% films.sort(); %>
             <li>
-              <div>
+              <div class="indexpage">
                 <a href="/films/<%=films[i]._id%>"><img class="poster" src="<%=films[i].Poster%>"></a><br/>
               </div>
             </li>

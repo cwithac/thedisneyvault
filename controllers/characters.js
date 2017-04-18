@@ -6,6 +6,7 @@ var express = require('express');
 var router = express.Router();
 var Character = require('../models/characters.js');
 var User = require('../models/users.js');
+var Films = require('../models/films.js');
 
 //ROUTES
 //---------------------------------
@@ -28,8 +29,11 @@ router.get('/', function(req, res) {
 //ADD CHARACTERS
 router.get('/add', function(req, res) {
   User.find({}, function(err, currentUser) {
-    res.render('characters/new.ejs', {
-      currentUser: req.session.currentUser
+    Films.find({}, function(err, allFilms) {
+      res.render('characters/new.ejs', {
+        currentUser: req.session.currentUser,
+        films: allFilms
+      });
     });
   });
 });

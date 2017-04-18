@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-<% include ../partials/head %>
-  </head>
-  <body class="clouds">
-    <nav>
-      <% include ../partials/nav %>
-    </nav>
-    <main class="container">
-      <h1>Add a Character to the Library</h1>
-      <section>
-        <form action="/characters" method="POST">
-          <label for="name">Name</label>
-            <input class="u-full-width" type="text" name="name" /><br/>
+<head>
+  <% include ../partials/head %>
+</head>
+<body class="clouds">
+  <nav>
+    <% include ../partials/nav %>
+  </nav>
+  <main class="container">
+    <h1>Add a Character to the Library</h1>
+    <section>
+      <form action="/characters" method="POST">
+        <div class="row">
+          <div class="six columns">
+            <label for="name">Name</label>
+            <input id="name" class="u-full-width" type="text" name="name" /><br/>
+          </div>
+          <div class="six columns">
+            <label for="film">Film</label>
+            <select name="filmId" id="film" />
+            <% for (var i = 0; i < films.length; i++) { %>
+              <option value="<%=films[i]._id%>"><%=films[i].Title%></option>
+              <% } %>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="six columns">
             <label for="photo">Photo Image Address</label>
-            <input class="u-full-width" type="text" name="headshot" />
-              <div class="row">
-                <div class="six columns">
-                  <label for="location">Setting</label>
-                  <input class="u-full-width" type="text" name="location" />
-                </div>
-                <div class="six columns">
-                  <label for="kind">Type</label>
-                  <input class="u-full-width" type="text" name="kind" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="six columns">
-                  <label for="quote">Quote</label>
-                  <input class="u-full-width" type="text" name="quote" />
-                </div>
-                <div class="six columns">
-                  <label for="enemy">Nemesis</label>
-                  <input class="u-full-width" type="text" name="enemy" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="six columns">
-                  <label for="love">Love Interest</label>
-                  <input class="u-full-width" type="text" name="love" />
-                </div>
-                <div class="six columns">
-                  <label for="friends">Sidekicks</label>
-                  <input class="u-full-width" type="text" name="friends" />
-                </div>
-                </div>
-                <div>
-                  <label for="additional-photos">Additional Photos</label>
-                  <input class="u-full-width" type="text" name="additional" />
-                </div>
-              </div>
-              <br/>
-            <input type="submit" value="Add">
-        </form>
-      </section>
-    </main>
-  </body>
+            <input id="photo" class="u-full-width" type="text" name="headshot" />
+          </div>
+          <div class="six columns">
+            <label for="location">Setting</label>
+            <input id="location" class="u-full-width" type="text" name="location" />
+          </div>
+          <label for="kind">Type</label>
+          <div class="radios" >
+            <div class="radio">Hero<input id="kind" class="u-full-width" type="radio" name="kind" value="Hero" /></div>
+            <div class="radio">Villain<input id="kind" class="u-full-width" type="radio" name="kind" value="Villain" /></div>
+            <div class="radio">Sidekick<input id="kind" class="u-full-width" type="radio" name="kind" value="Sidekick" /></div>
+            <div class="radio">Love Interest<input id="kind" class="u-full-width" type="radio" name="kind" value="Love Interest" /></div>
+            <div class="radio">Other<input id="kind" class="u-full-width" type="radio" name="kind" value="Other" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label for="quote">Quote</label>
+          <input id="quote" class="u-full-width" type="text" name="quote" />
+        </div>
+        <div class="six columns">
+          <label for="enemy">Nemesis</label>
+          <input id="enemy" class="u-full-width" type="text" name="enemy" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label for="love">Love Interest</label>
+          <input id="love" class="u-full-width" type="text" name="love" />
+        </div>
+        <div class="six columns">
+          <label for="friends">Sidekicks</label>
+          <input id="friends" class="u-full-width" type="text" name="friends" />
+        </div>
+      </div>
+      <div>
+        <label for="additional-photos">Additional Photos</label>
+        <input id="additional-photos" class="u-full-width" type="text" name="additional" />
+      </div>
+    </div>
+    <br/>
+    <input type="submit" value="Add">
+  </form>
+</section>
+</main>
+</body>
 </html>
