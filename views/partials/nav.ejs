@@ -1,6 +1,6 @@
 <ul>
   <% if (currentUser) { %>
-    <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+    <li><a href="/">Home</img></a></li>
     <li><a href="/films">View Films</a></li>
     <li><a href="/characters">View Characters</a></li>
     <li><a href="/users/profile"><%=currentUser.firstName%>'s Profile</a></li>
@@ -8,7 +8,7 @@
       <input class="logout" type="submit" value="Log Out" />
     </form></li>
   <% } else { %>
-    <li><a href="/"><img id="navlogo" src="../images/balloons.jpg"></img></a></li>
+    <li><a href="/">Home</img></a></li>
     <li><a href="/films">View Films</a></li>
     <li><a href="/characters">View Characters</a></li>
     <li><a href="/sessions/signin">Sign In</a></li>
