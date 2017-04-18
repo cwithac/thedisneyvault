@@ -261,6 +261,7 @@ p {
   }
   .show-poster, .char-poster {
     max-width: 200px;
+    min-height: 0px;
   }
 }
 
