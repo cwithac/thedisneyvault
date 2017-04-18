@@ -8,17 +8,19 @@
       <% include ../partials/nav %>
     </nav>
     <main class="container">
+
       <div class="filmshow">
-        <h1><%=film.Title%></h1>
+        <div>
         <img class="show-poster" src="<%=film.Poster%>" alt=""></img>
+      </div>
+      <div class="filmcontent">
+        <h1><%=film.Title%></h1>
       </br>
         Release Year: <%=film.Year%>
       </br>
-        <%=film.Plot%>
-      </div>
-      <div>
+        <p><%=film.Plot%></p>
         <h2>Characters in this Film: </h2>
-        <ul>
+        <ul class='characterslist'>
             <% for(var i = 0; i < film.characters.length; i++){ %>
                 <li><a href="/characters/<%=film.characters[i]._id%>"><%=film.characters[i].name%></a></li>
             <% } %>

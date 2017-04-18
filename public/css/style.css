@@ -160,8 +160,8 @@ li {
 .show-poster {
   min-width: 100px;
   min-height: 100px;
-  height: 400px;
-  background-color: black;
+  max-width: 400px;
+  padding: 5%;
 }
 
 .radios {
@@ -189,6 +189,32 @@ li {
   border-radius: 5px;
 }
 
+.filmshow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+
+.filmcontent {
+  text-align: right;
+  padding-right: 2%;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, .8);
+  width: 95%;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  line-height: 1em;
+  margin-left: 20%;
+  font-size: 30px;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width: 850px) {
@@ -198,7 +224,14 @@ li {
     /*margin-right: 25px;*/
     right: 10%;
     }
+  p {
+    margin-left: 10%;
+    font-size: 20px;
   }
+  .show-poster {
+    max-width: 200px;
+  }
+}
 
 @media (max-width: 715px) {
   .loginform {
@@ -208,6 +241,22 @@ li {
     right: 15%;
     left: 15%;
     color: white;
+  }
+}
+
+@media (max-width: 550px) {
+  .filmcontent {
+    text-align: center;
+  }
+  .filmshow {
+    display: block;
+  }
+  p {
+    margin: 0;
+    font-size: 15px;
+  }
+  .characterslist {
+    justify-content: center;
   }
 }
 
