@@ -171,6 +171,24 @@ li {
   align-content: space-around;
 }
 
+#search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.addBtn {
+  background-color: white;
+  color: #357DBB;
+}
+
+.result {
+  background-color: rgba(255, 255, 255, .8);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width: 850px) {

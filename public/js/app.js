@@ -34,10 +34,12 @@ var findFilms = function() {
       if ((filmsList.Search[i].Poster !== "N/A") && (filmsList.Search[i].Type === "movie")) {
       var $poster = $('<img>').attr('src', filmsList.Search[i].Poster)
       $poster.attr('class', 'poster');
-      var $addButton = $('<button id=' + filmsList.Search[i].imdbID + ' type="submit">Add Film</button>');
+      var $addButton = $('<button id=' + filmsList.Search[i].imdbID + ' type="submit">Select Film</button>');
+      $addButton.attr('class', 'addBtn')
       $addButton.on('click', addButtonClicked)
-      var $resultsBox = $('<div>')
+      var $resultsBox = $('<div>').attr('class', 'result');
       $resultsBox.append($poster);
+      $resultsBox.append('<br/>')
       $resultsBox.append($addButton);
       $searchResults.append($resultsBox)
     } else {
