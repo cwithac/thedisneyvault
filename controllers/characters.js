@@ -65,7 +65,12 @@ router.get('/:id', function(req, res) {
 //DELETE ROUTE
 router.delete('/:id', function(req, res) {
   Character.findByIdAndRemove(req.params.id, function() {
-    res.redirect('/characters');
+    Films.findOne({'characters._id': req.params.id}, function(err, foundOneFilm){
+      foundOneFilm.characters.id(req.params.id).remove();
+      foundOneFilm.save(function(err, data){
+        res.redirect('/characters');
+      });
+    });
   });
 });
 
