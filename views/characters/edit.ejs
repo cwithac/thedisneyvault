@@ -20,7 +20,13 @@
               <label for="film">Film</label>
               <select name="filmId" id="film" />
               <% for (var i = 0; i < films.length; i++) { %>
-                <option value="<%=films[i]._id%>"><%=films[i].Title%></option>
+                <option value="<%=films[i]._id%>"
+                  <% if(films[i]._id.toString() === characterFilm._id.toString()) {%>
+                    selected
+                  <% } %>
+                  >
+                  <%=films[i].Title%>
+                </option>
                 <% } %>
               </select>
             </div>

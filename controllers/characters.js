@@ -78,11 +78,14 @@ router.delete('/:id', function(req, res) {
 router.get('/:id/edit', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
     Films.find({}, function(err, allFilms) {
-      res.render('characters/edit.ejs', {
-        currentUser: req.session.currentUser,
-        character: foundACharacter,
-        films: allFilms
-      })
+      Films.findOne({ 'characters._id':req.params.id }, function (err, foundFilmCharacter) {
+        res.render('characters/edit.ejs', {
+          currentUser: req.session.currentUser,
+          character: foundACharacter,
+          films: allFilms,
+          characterFilm: foundFilmCharacter
+        });
+      });
     });
   });
 });
@@ -90,11 +93,23 @@ router.get('/:id/edit', function(req, res) {
 router.put('/:id', function(req, res){
   Character.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedCharacter) {
     Films.findOne({ 'characters._id' : req.params.id }, function(err, foundOneFilm) {
-      foundOneFilm.characters.id(req.params.id).remove();
-      foundOneFilm.characters.push(updatedCharacter);
-      foundOneFilm.save(function(err, data){
-        res.redirect('/characters/' + req.params.id);
-      });
+      if(foundOneFilm._id.toString() !== req.body.filmId){
+        foundOneFilm.characters.id(req.params.id).remove();
+        foundOneFilm.save(function(err, saveFoundFilm) {
+          Films.findById(req.body.filmId, function(err, newFilm) {
+            newFilm.characters.push(updatedCharacter);
+            newFilm.save(function(err, savedNewFilm){
+              res.redirect('/characters/' + req.params.id);
+            });
+          });
+        });
+      } else {
+        foundOneFilm.characters.id(req.params.id).remove();
+        foundOneFilm.characters.push(updatedCharacter);
+        foundOneFilm.save(function(err, data){
+          res.redirect('/characters/' + req.params.id);
+        });
+      }
     });
   });
 });
