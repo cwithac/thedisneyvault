@@ -39,20 +39,25 @@ router.get('/add', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  Character.create(req.body, function(err, createdCharacter) {
-    res.redirect('/characters')
+  Films.findById(req.body.filmId, function(err, foundOneFilm){
+    Character.create(req.body, function(err, createdCharacter) {
+      foundOneFilm.characters.push(createdCharacter);
+      foundOneFilm.save(function(err, data) {
+        res.redirect('/characters')
+      });
+    });
   });
 });
 
 //SHOW CHARACTERS
 router.get('/:id', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
-    Films.find({}, function(err, allFilms) {
+    Films.findOne({ 'characters._id':req.params.id }, function(err, foundOneFilm) {
       res.render('characters/show.ejs', {
         currentUser: req.session.currentUser,
-        character: foundACharacter,
-        films: allFilms
-      })
+        film: foundOneFilm,
+        character: foundACharacter
+      });
     });
   });
 });

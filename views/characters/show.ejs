@@ -8,21 +8,26 @@
       <% include ../partials/nav %>
     </nav>
     <main class="container">
-      <h1><%=character.name%></h1>
-      <img class="headshot" src="<%=character.headshot%>"></img>
-    </br>
-      Setting: <%=character.location%>
-    </br>
-      Type: <%=character.kind%>
-    </br>
-      Quote: <%=character.quote%>
-    </br>
-      Nemsis: <%=character.enemy%>
-    </br>
-      Love Interest: <%=character.love%>
-    </br>
-      Sidekicks: <%=character.friends%>
-    </br>
+      <div>
+        <img class="headshot" src="<%=character.headshot%>"></img>
+      </div>
+      <div>
+        <h1><%=character.name%></h1>
+      </br>
+        Film: <%=film.Title%>
+      </br>
+        Setting: <%=character.location%>
+      </br>
+        Type: <%=character.kind%>
+      </br>
+        Quote: <%=character.quote%>
+      </br>
+        Nemsis: <%=character.enemy%>
+      </br>
+        Love Interest: <%=character.love%>
+      </br>
+        Sidekicks: <%=character.friends%>
+      </div>
     </main>
     <footer>
       <ul class="centerfooter">
