@@ -6,6 +6,7 @@ var express = require('express');
 var router = express.Router();
 var Films = require('../models/films.js');
 var User = require('../models/users.js');
+var Character = require('../models/characters.js');
 
 //ROUTES
 //---------------------------------
@@ -53,8 +54,21 @@ router.get('/:id', function(req, res) {
 
 //DELETE FILMS
 router.delete('/:id', function(req, res) {
-  Films.findByIdAndRemove(req.params.id, function() {
-    res.redirect('/films');
+  Films.findByIdAndRemove(req.params.id, function(err, foundOneFilm) {
+    var characterIds = [];
+    for (var i = 0; i < foundOneFilm.characters.length; i++) {
+        characterIds.push(foundOneFilm.characters[i]._id);
+    }
+    Character.remove(
+      {
+          _id : {
+            $in: characterIds
+          }
+      },
+      function(err, data) {
+        res.redirect('/films');
+      }
+    );
   });
 });
 
