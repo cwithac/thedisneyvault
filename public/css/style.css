@@ -35,6 +35,15 @@ font-style: normal;
 margin-top: 5%;
 }
 
+.h1big {
+  font-size: 100px;
+  margin-bottom: 0;
+}
+
+div {
+  background-color: rgba(255, 255, 255, .8);
+}
+
 #navlogo {
   max-height: 20px;
   margin-bottom: -5px;
@@ -101,7 +110,7 @@ ul {
 
 .index {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0;
   list-style-type: none;
   margin-bottom: 0;
@@ -111,6 +120,10 @@ ul {
 
 li {
   padding: 0 1em;
+}
+
+p {
+  margin-top: -25px;
 }
 
 .centerfooter {
@@ -127,12 +140,8 @@ li {
 }
 
 .poster {
-  min-width: 100px;
-  min-height: 150px;
-  height: 200px;
-  background-color: white;
+  height: 150px;
   margin: 25px;
-  border: 1px solid black;
 }
 
 .library-character {

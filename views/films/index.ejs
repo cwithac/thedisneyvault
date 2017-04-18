@@ -8,21 +8,22 @@
       <% include ../partials/nav %>
     </nav>
     <main class="container">
-      <h1>The Film Library</h1>
-
+      <h1 class="h1big">The Film Library</h1>
       <br/>
-      <ul class="index">
-        <% for (var i = 0; i < films.length; i++) { %>
-          <li>
-              <a href="/films/<%=films[i]._id%>"><img class="poster" src="<%=films[i].Poster%>"></a><br/>
-              <%=films[i].Title%>
-          </li>
-      <% } %>
-      </ul>
+        <ul class="index">
+          <% for (var i = 0; i < films.length; i++) { %>
+            <li>
+              <div>
+                <a href="/films/<%=films[i]._id%>"><img class="poster" src="<%=films[i].Poster%>"></a><br/>
+                <p><%=films[i].Title%></p>
+                </div>
+            </li>
+        <% } %>
+        </ul>
     </main>
     <footer>
-      <ul class="index">
-      <li><a  href="/films/add">Add Film to Library</a></li>
+      <ul class="centerfooter">
+      <li><a href="/films/add">Add Film to Library</a></li>
       </ul>
     </footer>
   </body>

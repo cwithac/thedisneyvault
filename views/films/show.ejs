@@ -8,16 +8,15 @@
       <% include ../partials/nav %>
     </nav>
     <main class="container">
-      <h1><%=film.Title%></h1>
-      <img class="show-poster" src="<%=film.Poster%>" alt=""></img>
-    </br>
-      Release Year: <%=film.Year%>
-    </br>
-      <%=film.Plot%>
+      <div class="filmshow">
+        <h1><%=film.Title%></h1>
+        <img class="show-poster" src="<%=film.Poster%>" alt=""></img>
+      </br>
+        Release Year: <%=film.Year%>
+      </br>
+        <%=film.Plot%>
+      </div>
     </main>
-    <section>
-
-    </section>
     <footer>
       <ul class="centerfooter">
         <li><a  href="/films/add">Add Film to Library</a></li>
