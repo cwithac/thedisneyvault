@@ -30,9 +30,11 @@
     </main>
     <footer>
       <ul class="centerfooter">
-        <li><a  href="/films/add">Add Film</a></li>
+        <li><a  href="/films/add">Add a Film</a></li>
+        <li><a href="/characters/add">Add a Character</a></li>
+        <li>|</li>
         <li class="logout"><form action="/films/<%=film._id%>?_method=DELETE" method="POST">
-          <input class="logout" type="submit" value="Delete <%=film.title%>">
+          <input class="logout" type="submit" value="Delete <%=film.Title%>">
         </form></li>
       </ul>
     </footer>

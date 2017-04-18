@@ -7,12 +7,11 @@ var charSchema = mongoose.Schema({
     name: { type: String, required: true },
     headshot: { type: String, required: true },
     location: { type: String },
-    kind: Array,
+    kind: { type: String },
     quote: { type: String },
     enemy: { type: String },
     love: { type: String },
-    friends: Array,
-    additional: Array
+    friends: { type: String }
 });
 
 var Character = mongoose.model('Character', charSchema);

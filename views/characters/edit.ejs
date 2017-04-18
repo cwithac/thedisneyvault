@@ -42,11 +42,21 @@
             </div>
             <label for="kind">Type</label>
             <div class="radios" >
-              <div class="radio">Hero<input id="kind" class="u-full-width" type="radio" name="kind" value="Hero" /></div>
-              <div class="radio">Villain<input id="kind" class="u-full-width" type="radio" name="kind" value="Villain" /></div>
-              <div class="radio">Sidekick<input id="kind" class="u-full-width" type="radio" name="kind" value="Sidekick" /></div>
-              <div class="radio">Love Interest<input id="kind" class="u-full-width" type="radio" name="kind" value="Love Interest" /></div>
-              <div class="radio">Other<input id="kind" class="u-full-width" type="radio" name="kind" value="Other" /></div>
+              <div class="radio">Hero<input id="kind" class="u-full-width" type="radio" name="kind" value="Hero"
+                <% if (character.kind === "Hero") { %> checked="true" <% } %>
+                /></div>
+              <div class="radio">Villain<input id="kind" class="u-full-width" type="radio" name="kind" value="Villain"
+                <% if (character.kind === "Villain") { %> checked="true" <% } %>
+                 /></div>
+              <div class="radio">Sidekick<input id="kind" class="u-full-width" type="radio" name="kind" value="Sidekick"
+                <% if (character.kind === "Sidekick") { %> checked="true" <% } %>
+                 /></div>
+              <div class="radio">Love Interest<input id="kind" class="u-full-width" type="radio" name="kind" value="Love Interest"
+                <% if (character.kind === "Love Interest") { %> checked="true" <% } %>
+                /></div>
+              <div class="radio">Other<input id="kind" class="u-full-width" type="radio" name="kind" value="Other"
+                <% if (character.kind === "Other") { %> checked="true" <% } %>
+                /></div>
             </div>
           </div>
         </div>

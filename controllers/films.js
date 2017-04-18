@@ -11,6 +11,13 @@ var Character = require('../models/characters.js');
 //ROUTES
 //---------------------------------
 
+//JSON DATA
+router.get('/json', function(req,res) {
+  Films.find({}, function(err, jsonData) {
+    res.send(jsonData);
+  });
+});
+
 //FILMS INDEX
 // router.get('/', function(req, res) {
 //   res.render('films/index.ejs')
@@ -87,6 +94,8 @@ router.delete('/:id', function(req, res) {
 //     res.redirect('/films')
 //   });
 // });
+
+
 
 
 //LISTENERS

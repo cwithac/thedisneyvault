@@ -10,6 +10,13 @@ var bcrypt = require('bcrypt');
 //ROUTES
 //---------------------------------
 
+//JSON DATA
+router.get('/json', function(req,res) {
+  User.find({}, function(err, jsonData) {
+    res.send(jsonData);
+  });
+});
+
 //NEW USER REGISTER ROUTE
 router.get('/register', function(req, res) {
 res.render('users/register.ejs', {

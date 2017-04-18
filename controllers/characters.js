@@ -11,6 +11,14 @@ var Films = require('../models/films.js');
 //ROUTES
 //---------------------------------
 
+//JSON DATA
+router.get('/json', function(req,res) {
+  Character.find({}, function(err, jsonData) {
+    res.send(jsonData);
+  });
+});
+
+
 //CHARACTERS INDEX
 // router.get('/', function(req, res) {
 //   res.render('characters/index.ejs')
