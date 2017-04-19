@@ -260,6 +260,22 @@ p {
   left: 40%;
 }
 
+.thumbnail {
+  max-width: 50px;
+  max-height: 50px;
+  box-shadow: 3px 3px 5px #888888;
+}
+
+.thumbnailcenter {
+  max-width: 100px;
+  max-height: 100px;
+  box-shadow: 3px 3px 5px #888888;
+}
+
+.profileUL {
+  justify-content: center;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width: 850px) {

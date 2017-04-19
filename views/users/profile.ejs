@@ -7,12 +7,11 @@
     <nav>
 <% include ../partials/nav %>
     </nav>
-      <h1><%=currentUser.firstName%>'s Profile</h1>
-      <h1><%=sessionUser.characters.name%></h1>
-      <ul>
+      <h1>Characters added by <%=currentUser.firstName%>: </h1>
+      <ul class="profileUL">
         <% for (var i = 0; i < sessionUser.characters.length; i++) { %>
           <li>
-            <a href="/characters/<%=sessionUser.characters[i]._id%>"><%=sessionUser.characters[i].name%></a>
+            <a href="/characters/<%=sessionUser.characters[i]._id%>"><img class="thumbnailcenter" src="<%=sessionUser.characters[i].headshot%>" ></a>
           </li>
       <% } %>
       </ul>
