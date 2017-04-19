@@ -50,30 +50,39 @@ router.post('/', function(req, res) {
   if (req.body.headshot === "") {
     req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
   }
-  Films.findById(req.body.filmId, function(err, foundOneFilm){
-    Character.create(req.body, function(err, createdCharacter) {
-      foundOneFilm.characters.push(createdCharacter);
-      foundOneFilm.save(function(err, data) {
-        res.redirect('/characters')
+  User.findById(req.body.userID, function(err, currentUser) {
+    Films.findById(req.body.filmId, function(err, foundOneFilm){
+      Character.create(req.body, function(err, createdCharacter) {
+        console.log(currentUser);
+        foundOneFilm.characters.push(createdCharacter);
+        currentUser.characters.push(createdCharacter);
+        currentUser.save(function(err, data) {
+          foundOneFilm.save(function(err, data) {
+            res.redirect('/characters')
+          });
+        });
       });
     });
   });
 });
 
-router.post('/', function(req, res){
-  if (req.body.headshot === "") {
-    req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
-  }
-  User.findOne({'username': req.body.username}, function(err, currentUser) {
-    console.log(currentUser);
-    Character.create(req.body, function(err, createdCharacter) {
-      currentUser.characters.push(createdCharacter);
-      currentUser.save(function(err, data) {
-        res.redirect('/characters');
-      })
-    })
-  })
-})
+
+//FILM AND CHARACTERS
+// router.post('/', function(req, res) {
+//   if (req.body.headshot === "") {
+//     req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
+//   }
+//   Films.findById(req.body.filmId, function(err, foundOneFilm){
+//     Character.create(req.body, function(err, createdCharacter) {
+//       foundOneFilm.characters.push(createdCharacter);
+//       foundOneFilm.save(function(err, data) {
+//         res.redirect('/characters')
+//       });
+//     });
+//   });
+// });
+
+
 
 //SHOW CHARACTERS
 router.get('/:id', function(req, res) {

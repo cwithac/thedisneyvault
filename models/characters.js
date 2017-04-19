@@ -12,7 +12,8 @@ var charSchema = mongoose.Schema({
     quote: { type: String },
     enemy: { type: String },
     love: { type: String },
-    friends: { type: String }
+    friends: { type: String },
+    userID: { type: String }
 });
 
 var Character = mongoose.model('Character', charSchema);
