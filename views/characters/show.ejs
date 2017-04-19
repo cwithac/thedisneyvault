@@ -44,8 +44,7 @@
               <input class="logout" type="submit" value="Delete <%=character.name%>">
             </form></li>
           <% } else { %>
-            <li><a href="/sessions/signin">Sign In</a></li>
-            <li><a href="/users/register">Register</a></li>
+            <% include ../partials/footer %>
           <% } %>
         </ul>
       </ul>
