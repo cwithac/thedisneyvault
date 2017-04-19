@@ -60,6 +60,21 @@ router.post('/', function(req, res) {
   });
 });
 
+router.post('/', function(req, res){
+  if (req.body.headshot === "") {
+    req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
+  }
+  User.findOne({'username': req.body.username}, function(err, currentUser) {
+    console.log(currentUser);
+    Character.create(req.body, function(err, createdCharacter) {
+      currentUser.characters.push(createdCharacter);
+      currentUser.save(function(err, data) {
+        res.redirect('/characters');
+      })
+    })
+  })
+})
+
 //SHOW CHARACTERS
 router.get('/:id', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
