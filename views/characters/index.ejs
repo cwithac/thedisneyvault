@@ -22,8 +22,13 @@
     </main>
     <footer>
       <ul class="centerfooter">
-        <li><a href="/films/add">Add a Film</a></li>
-        <li><a href="/characters/add">Add a Character</a></li>
+        <% if (currentUser) { %>
+          <li><a href="/films/add">Add a Film</a></li>
+          <li><a href="/characters/add">Add a Character</a></li>
+        <% } else { %>
+          <li><a href="/sessions/signin">Sign In</a></li>
+          <li><a href="/users/register">Register</a></li>
+        <% } %>
       </ul>
     </footer>
   </body>

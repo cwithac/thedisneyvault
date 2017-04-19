@@ -34,13 +34,20 @@
     </main>
     <footer>
       <ul class="centerfooter">
-        <li><a  href="/films/add">Add a Film</a></li>
-        <li><a href="/characters/add">Add a Character</a></li>
-        <li>|</li>
-        <li><a href="/characters/<%=character._id%>/edit">Edit <%=character.name%></a></li>
-        <li class="logout"><form action="/characters/<%=character._id%>?_method=DELETE" method="POST">
-          <input class="logout" type="submit" value="Delete <%=character.name%>">
-        </form></li>
+        <ul class="centerfooter">
+          <% if (currentUser) { %>
+            <li><a  href="/films/add">Add a Film</a></li>
+            <li><a href="/characters/add">Add a Character</a></li>
+            <li>|</li>
+            <li><a href="/characters/<%=character._id%>/edit">Edit <%=character.name%></a></li>
+            <li class="logout"><form action="/characters/<%=character._id%>?_method=DELETE" method="POST">
+              <input class="logout" type="submit" value="Delete <%=character.name%>">
+            </form></li>
+          <% } else { %>
+            <li><a href="/sessions/signin">Sign In</a></li>
+            <li><a href="/users/register">Register</a></li>
+          <% } %>
+        </ul>
       </ul>
     </footer>
   </body>
