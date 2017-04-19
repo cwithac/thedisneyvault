@@ -11,7 +11,7 @@
       <ul class="profileUL">
         <% for (var i = 0; i < sessionUser.characters.length; i++) { %>
           <li>
-            <a href="/characters/<%=sessionUser.characters[i]._id%>"><img class="thumbnailcenter" src="<%=sessionUser.characters[i].headshot%>" ></a>
+            <a href="/characters/<%=sessionUser.characters[i]._id%>"><%=sessionUser.characters[i].name%></a>
           </li>
       <% } %>
       </ul>
