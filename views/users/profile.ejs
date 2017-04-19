@@ -9,9 +9,9 @@
     </nav>
       <h1><%=currentUser.firstName%>'s Profile</h1>
       <ul>
-        <% for (var i = 0; i < characters.length; i++) { %>
+        <% for (var i = 0; i < currentUser.characters.length; i++) { %>
           <li>
-            <a href="/characters/<%=characters[i]._id%>"><%=characters[i].name%></a>
+            <a href="/characters/<%=currentUser.characters[i]._id%>"><%=currentUser.characters[i].name%></a>
           </li>
       <%  } %>
       </ul>
