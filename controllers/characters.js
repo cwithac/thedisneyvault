@@ -107,17 +107,35 @@ router.get('/:id', function(req, res) {
   });
 });
 
-//DELETE ROUTE
+// //DELETE ROUTE
 router.delete('/:id', function(req, res) {
-  Character.findByIdAndRemove(req.params.id, function() {
-    Films.findOne({'characters._id': req.params.id}, function(err, foundOneFilm){
-      foundOneFilm.characters.id(req.params.id).remove();
-      foundOneFilm.save(function(err, data){
-        res.redirect('/characters');
+  Character.findByIdAndRemove(req.params.id, function(err, foundACharacter){
+    User.findOne({'characters._id': req.params.id}, function(err, foundOneUser) {
+      Films.findOne({'characters._id': req.params.id}, function(err, foundOneFilm) {
+        foundOneUser.characters.id(req.params.id).remove();
+        foundOneFilm.characters.id(req.params.id).remove();
+        foundOneUser.save(function(err, data){
+          foundOneFilm.save(function(err, data){
+            res.redirect('/characters')
+          });
+        });
       });
     });
   });
 });
+
+
+// //DELETE ROUTE
+// router.delete('/:id', function(req, res) {
+//   Character.findByIdAndRemove(req.params.id, function() {
+//     Films.findOne({'characters._id': req.params.id}, function(err, foundOneFilm){
+//       foundOneFilm.characters.id(req.params.id).remove();
+//       foundOneFilm.save(function(err, data){
+//         res.redirect('/characters');
+//       });
+//     });
+//   });
+// });
 
 //EDIT/UPDATE CHARACTERS
 router.get('/:id/edit', function(req, res) {
