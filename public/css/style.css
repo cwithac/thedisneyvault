@@ -246,6 +246,15 @@ p {
   font-size: 40px;
 }
 
+.tryagain {
+  color: white;
+  font-size: 15px;
+  text-align: left;
+  position: absolute;
+  bottom: 35%;
+  left: 40%;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width: 850px) {
@@ -289,6 +298,11 @@ p {
   }
   .characterslist {
     justify-content: center;
+  }
+  .tryagain {
+    font-size: 20px;
+    top: 10%;
+    left: 15%;
   }
 }
 

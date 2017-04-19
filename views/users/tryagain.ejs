@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body class="home">
+  <nav>
+    <% include ../partials/nav %>
+  </nav>
+
+  </div>
+  <p class="tryagain">
+    No account was found with that<br/> username and/or password.<br/><br/>Please <a href="/sessions/signin">try again</a>, <br/>or register below for a new account.
+  </p>
+    <div class="loginform">
+    <form action="/users" method="POST">
+      <label for="first-name">First Name</label>
+        <input class="u-full-width" type="text" name="firstName" />
+          <div class="row">
+            <div class="six columns">
+              <label for="user-name">Username</label>
+              <input class="u-full-width" type="text" name="username" />
+            </div>
+            <div class="six columns">
+              <label for="password">Password</label>
+              <input class="u-full-width" type="password" name="password" /><br/>
+            </div>
+          </div>
+          <input type="submit" value="Register">
+    </form>
+  </div>
+</body>
+</html>

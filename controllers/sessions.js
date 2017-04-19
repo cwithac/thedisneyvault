@@ -26,10 +26,10 @@ router.post('/', function(req, res) {
         req.session.currentUser = foundOneUser;
         res.redirect('/');
       } else {
-        res.redirect('/users/register');
+        res.redirect('/users/register/tryagain');
       }
     } else {
-      res.redirect('/users/register');
+      res.redirect('/users/register/tryagain');
     }
   });
 });

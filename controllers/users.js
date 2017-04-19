@@ -24,6 +24,13 @@ res.render('users/register.ejs', {
   });
 });
 
+//TRY AGAIN REGISTER ROUTE
+router.get('/register/tryagain', function(req, res) {
+res.render('users/tryagain.ejs', {
+  currentUser: req.session.currentUser
+  });
+});
+
 //NEW USER REGISTRATION CREATION ROUTE
 //PASSWORD ENCRYPT ON CREATE USER
 router.post('/', function(req, res) {
