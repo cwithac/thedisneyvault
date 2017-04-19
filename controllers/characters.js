@@ -49,6 +49,16 @@ router.get('/add', function(req, res) {
 router.post('/', function(req, res) {
   if (req.body.headshot === "") {
     req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
+  } if (req.body.location === "") {
+    req.body.location = "None"
+  } if (req.body.kind === "") {
+    req.body.kind = "Hero"
+  } if (req.body.enemy === "") {
+    req.body.enemy = "None"
+  } if (req.body.love === "") {
+    req.body.love = "None"
+  } if (req.body.friends === "") {
+    req.body.friends = "None"
   }
   User.findById(req.body.userID, function(err, currentUser) {
     Films.findById(req.body.filmId, function(err, foundOneFilm){
