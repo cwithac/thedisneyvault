@@ -215,8 +215,9 @@ li {
 }
 
 .charcontent {
-  text-align: right;
-  padding-right: 2%;
+  text-align: left;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 .showcontainer {
