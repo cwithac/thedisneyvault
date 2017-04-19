@@ -247,8 +247,8 @@ p {
 }
 
 .quote {
-  font-family: 'Cedarville Cursive', cursive;
-  font-size: 40px;
+  font-family: 'Calligraffitti', cursive;
+  font-size: 25px;
 }
 
 .tryagain {
@@ -274,6 +274,10 @@ p {
 
 .profileUL {
   justify-content: center;
+}
+
+.listing {
+  font-size: x-large;
 }
 
 /*RESPONSIVE*/

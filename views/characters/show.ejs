@@ -16,17 +16,17 @@
       <div class="charcontent">
         <h1><%=character.name%></h1>
       </br>
-        Film: <a href="/films/<%=film._id%>"><%=film.Title%></a>
+        <span class="listing">Film:</span> <a href="/films/<%=film._id%>"><%=film.Title%></a>
       </br>
-        Setting: <%=character.location%>
+        <span class="listing">Setting:</span> <%=character.location%>
       </br>
-        Type: <%=character.kind%>
+        <span class="listing">Type:</span> <%=character.kind%>
             </br>
-        Nemsis: <%=character.enemy%>
+        <span class="listing">Nemsis:</span> <%=character.enemy%>
       </br>
-        Love Interest: <%=character.love%>
+        <span class="listing">Love Interest:</span> <%=character.love%>
       </br>
-        Sidekicks: <%=character.friends%>
+        <span class="listing">Sidekicks:</span> <%=character.friends%>
       </br>
         <span class="quote"><%=character.quote%></span>
       </div>
