@@ -35,6 +35,10 @@ font-style: normal;
 margin-top: 5%;
 }
 
+.container {
+  margin-bottom: 100px;
+}
+
 .h1big {
   font-size: 100px;
   margin-bottom: 0;

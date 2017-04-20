@@ -130,7 +130,7 @@ Aladdin = [ {
   Photo: "https://lumiere-a.akamaihd.net/v1/images/image_c458dd82.jpeg",
   Setting: "Agrabah",
   Type: "Sidekick",
-  Quote: "Yes, on mighty evil one",
+  Quote: "Yes, oh mighty evil one",
   Nemesis: "Aladdin",
   Love: "None",
   Sidekicks: ""
@@ -143,7 +143,7 @@ The Lion King = [{
   Setting: "Africa",
   Type: "Hero",
   Quote: "I just can't wait to be king",
-  Nemesis: "Aladdin",
+  Nemesis: "Scar",
   Love: "Nala",
   Sidekicks: "Timon, Pumba"
 }, {
@@ -153,7 +153,7 @@ The Lion King = [{
   Setting: "Africa",
   Type: "Love Interest",
   Quote: "Can you feel the love tonight?",
-  Nemesis: "Aladdin",
+  Nemesis: "Scar",
   Love: "Simba",
   Sidekicks: ""
 }]
@@ -197,7 +197,7 @@ Hercules = {
 Mulan = {
   Name: "Mulan",
   Film: "Mulan",
-  Photo: "http://www.wdwinfo.com/wp-content/uploads/2016/10/mulan.jpg",
+  Photo: "",
   Setting: "China",
   Type: "Hero",
   Quote: "When will my reflection show who I am inside?",
@@ -222,7 +222,7 @@ Lilo & Stitch = [{
   Name: "Stitch",
   Film: "Lilo & Stitch",
   Photo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Stitch_%28Lilo_%26_Stitch%29.svg/1200px-Stitch_%28Lilo_%26_Stitch%29.svg.png",
-  Setting: "Hawaii, Outer space",
+  Setting: "Hawaii, Space",
   Type: "Hero",
   Quote: "",
   Nemesis: "Dr. Jumba Jookiba",
