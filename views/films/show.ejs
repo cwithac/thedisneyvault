@@ -22,7 +22,7 @@
         <h2>Characters in this Film: </h2>
         <ul class='characterslist'>
             <% for(var i = 0; i < film.characters.length; i++){ %>
-                <li class="mini-pics"><a href="/characters/<%=film.characters[i]._id%>"><img class="thumbnail" src="<%=film.characters[i].headshot%>"><h6 class="profile2"><%=film.characters[i].name%></h6></img></a></li>
+                <li class="mini-pics"><a href="/characters/<%=film.characters[i]._id%>"><img class="thumbnail" src="<%=film.characters[i].headshot%>"></img></a></li>
             <% } %>
         </ul>
       </div>

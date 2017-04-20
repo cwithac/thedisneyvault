@@ -149,8 +149,7 @@ li {
 .library-character {
   max-width: 150px;
   max-height: 150px;
-  margin: 10px;
-  margin-bottom: 0;
+  margin-bottom: -75px;
 }
 
 .charindexpage {
@@ -172,8 +171,10 @@ li {
 }
 
 .char-poster {
-  min-height: 300px;
-  max-height: 300px;
+  /*min-height: 300px;*/
+  /*max-height: 300px;*/
+  min-width: 300px;
+  max-width: 300px;
   margin: 5%;
   box-shadow: 15px 15px 20px #888888;
 }
@@ -302,12 +303,10 @@ p {
 }
 
 .charindexhover {
-  position: relative;
-  bottom: 80px;
-  margin: -33px;
+  margin: 0;
   font-size: 45px;
   opacity: 0;
-  transform: rotate(-45deg);
+  /*transform: rotate(-45deg);*/
 }
 
 .charindexhover:hover {
