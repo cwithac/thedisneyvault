@@ -19,13 +19,17 @@ $deleteButton.on('mouseleave', changedMind);
 
 //-------------------------------------
 
+//---------------------------------------
+//USES OMDBABI FOR ADD FILMS AND CONTENT:
+//---------------------------------------
+//SEARCH BUTTON FINDS THROUGH ALL OMDB API
 var findFilms = function() {
   console.log('Search Button Has Been Clicked');
   var $searchBox = $('#search-box');
   var $searchedValue = $searchBox.val();
   console.log("Searched Input:" + $searchedValue);
   var $searchResults = $('#search-results');
-  $.ajax('https://www.omdbapi.com/?s=' + $searchedValue + '&r=json')
+  $.ajax('https://www.omdbapi.com/?s=' + $searchedValue + '&r=json') //RETURNS DATA BASED ON SEARCH PARAM
 
   .done(function(filmsList) {
     console.log("JSON:");
@@ -33,8 +37,9 @@ var findFilms = function() {
     console.log(filmsList.Search);
     $searchResults.empty()
 
-    for (var i = 0; i < filmsList.Search.length; i++) {
-      if ((filmsList.Search[i].Poster !== "N/A") && (filmsList.Search[i].Type === "movie")) {
+//CREATES AND DISPLAYS RESULTS BOX AND INDIVIDUAL RESULTS
+    for (var i = 0; i < filmsList.Search.length; i++) { //LOOPS THROUGH DATA TO DISPLAY ...
+      if ((filmsList.Search[i].Poster !== "N/A") && (filmsList.Search[i].Type === "movie")) { //ONLY MOVIES WITH POSTERS
       var $poster = $('<img>').attr('src', filmsList.Search[i].Poster)
       $poster.attr('class', 'poster');
       var $addButton = $('<button id=' + filmsList.Search[i].imdbID + ' type="submit">Select Film</button>');
@@ -45,7 +50,7 @@ var findFilms = function() {
       $resultsBox.append('<br/>')
       $resultsBox.append($addButton);
       $searchResults.append($resultsBox)
-    } else {
+    } else { //REDUNDANT DEFAULT POSTER CHECK
         if (filmsList.Search[i].Poster === "N/A") { filmsList.Search[i].Poster = "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"; };
       }
     }
@@ -53,7 +58,7 @@ var findFilms = function() {
   })
 };
 
-var addButtonClicked = function() {
+var addButtonClicked = function() { //API ADD/POST FUNCTIONALITY ON CLICK OF 'SELECT FILM'
   console.log("imdbID: " + this.id);
    $.ajax('https://www.omdbapi.com/?i=' + this.id + '&y=&plot=short&r=json')
    .done(function(selectedFilm) {
@@ -68,6 +73,10 @@ var addButtonClicked = function() {
 };
 
 //=======================================================
+
+//---------------------------------------
+//WARNING POPUP FOR DELETING FILMS
+//---------------------------------------
 
 var $h4message = $('<h4>').text('Deleting a film will remove all associated characters.  Are you sure you wish to continue?');
 
