@@ -304,15 +304,15 @@ p {
 
 .charindexhover {
   margin: 0;
-  font-size: 25px;
+  font-size: 15px;
   opacity: 0;
   /*transform: rotate(-45deg);*/
 }
 
 .charindexhover:hover {
   opacity: 1;
-  color: white;
-  background: black;
+  color: black;
+  background: rgba(255, 255, 255, .8);
   z-index: 99;
   position: relative;
 }
