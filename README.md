@@ -14,15 +14,17 @@ Build and explore the world of Disney's animated films and characters with The D
 ### Or by Character
 ![](http://i.imgur.com/oBYeJ32.png)
 
-### echnologies Used:
+### Technologies Used
 
 ```
-Node and Express
+Node, Express, EJS
 Mongo DB, Mongoose
-EJS
 OMDB API, AJAX
 Javascript, jQuery
-Skeleton Framework
+MVC Structure. User, Films & Character Models. Head, nav and footer partials.
+bcrypt password encryption
+Skeleton Framework + CSS
+mobilefirst responsive design
 ```
 
 ### Implementation Priorities
@@ -46,6 +48,7 @@ Skeleton Framework
 ---
 
 *For educational purposes only.  
+
 All images, films and characters property of The Walt Disney Company.
 The "[Disney Vault](https://en.wikipedia.org/wiki/Disney_Vault)" is the term used by Walt Disney Studios Home Entertainment for its policy of putting home video releases of Walt Disney Animation Studios's animated features on moratorium.*
 ![The Walt Disney Company](http://logos-download.com/wp-content/uploads/2016/06/The_Walt_Disney_company_logo.png)
