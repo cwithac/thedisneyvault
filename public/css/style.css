@@ -288,9 +288,24 @@ p {
   position: relative;
   bottom: 70px;
   opacity: 0;
+  font-size: 20px;
+  transform: rotate(-45deg);
 }
 
 .profile:hover {
+  opacity: 1;
+}
+
+.charindexhover {
+  position: relative;
+  bottom: 80px;
+  margin: -33px;
+  font-size: 45px;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+.charindexhover:hover {
   opacity: 1;
 }
 
