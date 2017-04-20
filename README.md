@@ -47,9 +47,9 @@ mobilefirst responsive design
 
 ---
 
-*For educational purposes only.  
+*For educational purposes only.*  
 
-All images, films and characters property of The Walt Disney Company.
+*All images, films and characters property of The Walt Disney Company.
 The "[Disney Vault](https://en.wikipedia.org/wiki/Disney_Vault)" is the term used by Walt Disney Studios Home Entertainment for its policy of putting home video releases of Walt Disney Animation Studios's animated features on moratorium.*
 ![The Walt Disney Company](http://logos-download.com/wp-content/uploads/2016/06/The_Walt_Disney_company_logo.png)
 
