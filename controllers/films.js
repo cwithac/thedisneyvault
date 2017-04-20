@@ -79,6 +79,29 @@ router.delete('/:id', function(req, res) {
   });
 });
 
+
+
+
+//DELETE FILMS
+// router.delete('/:id', function(req, res) {
+//   Films.findByIdAndRemove(req.params.id, function(err, foundOneFilm) {
+//     var characterIds = [];
+//     for (var i = 0; i < foundOneFilm.characters.length; i++) {
+//         characterIds.push(foundOneFilm.characters[i]._id);
+//     }
+//     Character.remove(
+//       {
+//           _id : {
+//             $in: characterIds
+//           }
+//       },
+//       function(err, data) {
+//         res.redirect('/films');
+//       }
+//     );
+//   });
+// });
+
 // //UPDATE FILMS
 // router.get('/:id/edit', function(req, res) {
 //   Films.findById(req.params.id, function(err, foundOneFilm) {

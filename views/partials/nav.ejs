@@ -5,6 +5,7 @@
     <li><a href="/characters">View Characters</a></li>
     <li>|</li>
     <li><a href="/users/profile"><%=currentUser.firstName%>'s Profile</a></li>
+        <!-- <li>Welcome <%=currentUser.firstName%>!</li> -->
     <li class="logout"><form action="/sessions?_method=DELETE" method="POST">
       <input class="logout" type="submit" value="Log Out" />
     </form></li>

@@ -104,7 +104,7 @@ router.get('/:id', function(req, res) {
   });
 });
 
-// //DELETE ROUTE
+////DELETE ROUTE
 router.delete('/:id', function(req, res) {
   Character.findByIdAndRemove(req.params.id, function(err, foundACharacter){
     User.findOne({'characters._id': req.params.id}, function(err, foundOneUser) {
@@ -122,7 +122,7 @@ router.delete('/:id', function(req, res) {
 });
 
 
-// //DELETE ROUTE
+////DELETE ROUTE
 // router.delete('/:id', function(req, res) {
 //   Character.findByIdAndRemove(req.params.id, function() {
 //     Films.findOne({'characters._id': req.params.id}, function(err, foundOneFilm){
