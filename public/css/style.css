@@ -311,6 +311,10 @@ p {
 
 .charindexhover:hover {
   opacity: 1;
+  color: white;
+  background: black;
+  z-index: 99;
+  position: relative;
 }
 
 /*.profile2 {
