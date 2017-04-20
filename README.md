@@ -21,9 +21,10 @@ Build and explore the world of Disney's animated films and characters with The D
 + Mongo DB, Mongoose
 + OMDB API, AJAX
 + Javascript, jQuery
-+ MVC Structure | User, Films & Character Models + Partials: head, nav and footer.
++ MVC Structure | User, Films & Character Models
++ Partials: head, nav and footer
 + bcrypt password encryption
-+ Skeleton Framework + CSS
++ Skeleton Framework | CSS
 + mobilefirst responsive design
 ```
 
