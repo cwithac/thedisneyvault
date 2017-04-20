@@ -10,5 +10,14 @@
     <div>
       <h1 class="thedisneyvault"><span class="top">The</span>Disney<span class="bottom">Vault</span></h1>
     </div>
+        <% if (currentUser) { %>
+    <footer>
+      <ul class="centerfooter">
+          <li><a href="/films/add">Add a Film</a></li>
+          <li><a href="/characters/add">Add a Character</a></li>
+      </ul>
+    </footer>
+    <% } else { %>
+      <% } %>
   </body>
 </html>
