@@ -124,6 +124,7 @@ li {
 
 .centerfooter {
   justify-content: center;
+  margin: 0;
 }
 
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
@@ -322,6 +323,10 @@ p {
   opacity: 1;
 }
 
+#delete-button {
+  margin: 0;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width: 850px) {
@@ -348,6 +353,9 @@ p {
     top: 30%;
     right: 15%;
     left: 15%;
+    color: black;
+  }
+  label {
     color: white;
   }
 }
