@@ -9,12 +9,11 @@
 $(function() {
 
 var $searchButton = $('#search-button');
-
 $searchButton.on('click', findFilms);
 
 var $deleteButton = $('#delete-button');
-
-$deleteButton.on('click', areYouSure);
+$deleteButton.on('mouseenter', areYouSure);
+$deleteButton.on('mouseleave', changedMind);
 
 });
 
@@ -68,38 +67,16 @@ var addButtonClicked = function() {
    })
 };
 
+//=======================================================
+
 var $h4message = $('<h4>').text('Deleting a film will remove all associated characters.  Are you sure you wish to continue?');
-var $yesRealDelete = $('<button>Yes</button>').attr('id', 'yesButton');
-var $noToDelete = $('<button>No</button>').attr('id', 'noButton');
 
 var areYouSure = function() {
-  console.log("Delete Button Clicked");
-  $('#delete-button').hide();
-  $('footer').prepend($yesRealDelete);
-  $('footer').prepend($noToDelete);
+  console.log('are you sure');
   $('footer').prepend($h4message);
-  $yesRealDelete.on('click', yesDelete);
-  $noToDelete.on('click', noDoNotDelete);
 };
 
-var yesDelete = function(){
-  console.log('Yes has been clicked');
-  $('#delete-button').show();
-  $('h4').empty();
-  $yesRealDelete.hide();
-  $noToDelete.hide();
+var changedMind = function() {
+  console.log('changed mind');
+  $('h4').remove();
 };
-
-var noDoNotDelete = function() {
-  console.log('No has been clicked');
-  $('#delete-button').show();
-  $('h4').empty();
-  $yesRealDelete.hide();
-  $noToDelete.hide();
-}
-
-
-
-// <form action="/films/<%=film._id%>?_method=DELETE" method="POST">
-//   <input class="logout" type="submit" value="Delete <%=film.Title%>">
-// </form>
