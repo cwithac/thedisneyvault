@@ -309,6 +309,19 @@ p {
   opacity: 1;
 }
 
+.profile2 {
+  position: relative;
+  bottom: 45px;
+  opacity: 0;
+  font-size: 15px;
+  transform: rotate(-45deg);
+  text-align: center;
+}
+
+.profile2:hover {
+  opacity: 1;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width: 850px) {
