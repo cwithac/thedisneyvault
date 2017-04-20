@@ -45,6 +45,7 @@ Build and explore the world of Disney's animated films and characters with The D
 + Duplicate data able to be added in both films and characters.
 + No review or content validation of images for quality (site age rating).
 + No character type username/password restriction.
++ Film and character information not sorted (alphabetically, by date...).
 
 ---
 
