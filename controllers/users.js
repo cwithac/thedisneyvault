@@ -11,11 +11,11 @@ var bcrypt = require('bcrypt');
 //---------------------------------
 
 //JSON DATA
-router.get('/json', function(req,res) {
-  User.find({}, function(err, jsonData) {
-    res.send(jsonData);
-  });
-});
+// router.get('/json', function(req,res) {
+//   User.find({}, function(err, jsonData) {
+//     res.send(jsonData);
+//   });
+// });
 
 //NEW USER REGISTER ROUTE
 router.get('/register', function(req, res) {
@@ -40,15 +40,16 @@ router.post('/', function(req, res) {
   });
 });
 
-//SHOW USER PROFILE
-router.get('/profile', function(req, res) {
-  User.findById(req.session.currentUser._id, function(err, sessionUser) {
-    res.render('users/profile.ejs', {
-      currentUser: req.session.currentUser,
-      sessionUser: sessionUser
-    });
-  });
-});
+//USER PROFILE ROUTE DISABLED
+// //SHOW USER PROFILE
+// router.get('/profile', function(req, res) {
+//   User.findById(req.session.currentUser._id, function(err, sessionUser) {
+//     res.render('users/profile.ejs', {
+//       currentUser: req.session.currentUser,
+//       sessionUser: sessionUser
+//     });
+//   });
+// });
 
 //LISTENERS
 //---------------------------------

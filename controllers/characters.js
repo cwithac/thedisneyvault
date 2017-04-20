@@ -12,11 +12,11 @@ var Films = require('../models/films.js');
 //---------------------------------
 
 //JSON DATA
-router.get('/json', function(req,res) {
-  Character.find({}, function(err, jsonData) {
-    res.send(jsonData);
-  });
-});
+// router.get('/json', function(req,res) {
+//   Character.find({}, function(err, jsonData) {
+//     res.send(jsonData);
+//   });
+// });
 
 
 //CHARACTERS INDEX
@@ -46,6 +46,9 @@ router.get('/add', function(req, res) {
   });
 });
 
+//ADD CHARACTER DEFAULTS INCLUDING PROFILE PIC TEMPLATE AND CONTENT
+//ADDS CHARACTER TO ASSOCIATED FILM FROM DROP DOWN
+//USERS, CHARACTERS, FILMS
 router.post('/', function(req, res) {
   if (req.body.headshot === "") {
     req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
@@ -75,6 +78,7 @@ router.post('/', function(req, res) {
 
 
 //FILM AND CHARACTERS
+//POST ROUTE FOR CHARACTERS WITHOUT USERS ASSOCIATED
 // router.post('/', function(req, res) {
 //   if (req.body.headshot === "") {
 //     req.body.headshot = 'https://s-media-cache-ak0.pinimg.com/564x/e9/94/7c/e9947cf3e2d092444d4fdec539f49fce.jpg'
@@ -90,8 +94,9 @@ router.post('/', function(req, res) {
 // });
 
 
-
 //SHOW CHARACTERS
+//ATTACHES FILM TO CHARACTER + //USERS, CHARACTERS, FILMS
+//INCLUDES SHOW OF CHARACTER FROM USER PROFILE
 router.get('/:id', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
     Films.findOne({ 'characters._id':req.params.id }, function(err, foundOneFilm) {
@@ -104,7 +109,9 @@ router.get('/:id', function(req, res) {
   });
 });
 
-////DELETE ROUTE
+//DELETE ROUTE
+//USERS, CHARACTERS, FILMS
+//INCLUDES DELETION OF CHARACTER FROM USER PROFILE
 router.delete('/:id', function(req, res) {
   Character.findByIdAndRemove(req.params.id, function(err, foundACharacter){
     User.findOne({'characters._id': req.params.id}, function(err, foundOneUser) {
@@ -123,6 +130,7 @@ router.delete('/:id', function(req, res) {
 
 
 ////DELETE ROUTE
+//DELETE ROUTE FOR CHARACTERS WITHOUT USERS ASSOCIATED
 // router.delete('/:id', function(req, res) {
 //   Character.findByIdAndRemove(req.params.id, function() {
 //     Films.findOne({'characters._id': req.params.id}, function(err, foundOneFilm){
@@ -135,6 +143,8 @@ router.delete('/:id', function(req, res) {
 // });
 
 //EDIT/UPDATE CHARACTERS
+//USERS, CHARACTERS, FILMS
+//INCLUDES UPDATE OF CHARACTER FROM USER PROFILE
 router.get('/:id/edit', function(req, res) {
   Character.findById(req.params.id, function(err, foundACharacter) {
     Films.find({}, function(err, allFilms) {
@@ -174,6 +184,7 @@ router.put('/:id', function(req, res){
   });
 });
 
+//UPDATE ROUTE FOR CHARACTERS WITHOUT USERS ASSOCIATED
 // router.put('/:id', function(req, res){
 //   Character.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedCharacter) {
 //     Films.findOne({ 'characters._id' : req.params.id }, function(err, foundOneFilm) {

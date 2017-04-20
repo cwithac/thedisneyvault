@@ -12,11 +12,11 @@ var Character = require('../models/characters.js');
 //---------------------------------
 
 //JSON DATA
-router.get('/json', function(req,res) {
-  Films.find({}, function(err, jsonData) {
-    res.send(jsonData);
-  });
-});
+// router.get('/json', function(req,res) {
+//   Films.find({}, function(err, jsonData) {
+//     res.send(jsonData);
+//   });
+// });
 
 //FILMS INDEX
 // router.get('/', function(req, res) {
@@ -34,6 +34,7 @@ router.get('/', function(req, res) {
 });
 
 //ADD FILMS
+//ADD WITH API (SEE APP.JS)
 router.get('/add', function(req, res) {
   User.find({}, function(err, currentUser) {
     res.render('films/new.ejs', {
@@ -60,6 +61,8 @@ router.get('/:id', function(req, res) {
 });
 
 //DELETE FILMS
+//REMOVES CHARACTERS FROM ASSOCIATED FILM
+//TBA: DELETE FILMS DOES NOT REMOVE CHARACTER FROM PROFILE
 router.delete('/:id', function(req, res) {
   Films.findByIdAndRemove(req.params.id, function(err, foundOneFilm) {
     var characterIds = [];
@@ -79,29 +82,7 @@ router.delete('/:id', function(req, res) {
   });
 });
 
-
-
-
-//DELETE FILMS
-// router.delete('/:id', function(req, res) {
-//   Films.findByIdAndRemove(req.params.id, function(err, foundOneFilm) {
-//     var characterIds = [];
-//     for (var i = 0; i < foundOneFilm.characters.length; i++) {
-//         characterIds.push(foundOneFilm.characters[i]._id);
-//     }
-//     Character.remove(
-//       {
-//           _id : {
-//             $in: characterIds
-//           }
-//       },
-//       function(err, data) {
-//         res.redirect('/films');
-//       }
-//     );
-//   });
-// });
-
+//DISABLED DUE TO API
 // //UPDATE FILMS
 // router.get('/:id/edit', function(req, res) {
 //   Films.findById(req.params.id, function(err, foundOneFilm) {
@@ -117,8 +98,6 @@ router.delete('/:id', function(req, res) {
 //     res.redirect('/films')
 //   });
 // });
-
-
 
 
 //LISTENERS
