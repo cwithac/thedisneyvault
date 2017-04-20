@@ -17,14 +17,14 @@ Build and explore the world of Disney's animated films and characters with The D
 ### Technologies Used
 
 ```
-Node, Express, EJS
-Mongo DB, Mongoose
-OMDB API, AJAX
-Javascript, jQuery
-MVC Structure. User, Films & Character Models. Head, nav and footer partials.
-bcrypt password encryption
-Skeleton Framework + CSS
-mobilefirst responsive design
++ Node, Express, EJS
++ Mongo DB, Mongoose
++ OMDB API, AJAX
++ Javascript, jQuery
++ MVC Structure | User, Films & Character Models + Partials: head, nav and footer.
++ bcrypt password encryption
++ Skeleton Framework + CSS
++ mobilefirst responsive design
 ```
 
 ### Implementation Priorities
@@ -35,7 +35,7 @@ mobilefirst responsive design
 ### Upcoming Features
 + Manual Add of Films.
 + Hover name of images only on empty character profile pictures.
-+ Link characters with tags outside of film (view all sidekicks, villains...)
++ Link characters with tags outside of film (view all sidekicks, villains...).
 + Connect details between character pages (love interest to love interest).
 + Share with social media.
 
