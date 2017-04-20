@@ -280,6 +280,20 @@ p {
   font-size: x-large;
 }
 
+.thumbnail-container {
+  display: flex;
+}
+
+.profile {
+  position: relative;
+  bottom: 70px;
+  opacity: 0;
+}
+
+.profile:hover {
+  opacity: 1;
+}
+
 /*RESPONSIVE*/
 
 @media (max-width: 850px) {

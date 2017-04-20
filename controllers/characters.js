@@ -28,8 +28,8 @@ router.get('/json', function(req,res) {
 router.get('/', function(req, res) {
   Character.find({}, function(err, foundCharacters){
     res.render('characters/index.ejs', {
-          currentUser: req.session.currentUser,
-          characters: foundCharacters
+      currentUser: req.session.currentUser,
+      characters: foundCharacters
     });
   });
 });
@@ -154,21 +154,21 @@ router.put('/:id', function(req, res){
   Character.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(err, updatedCharacter){
     User.findOne({ 'characters._id': req.params.id }, function(err, foundOneUser){
       Films.findOne({ 'characters._id': req.params.id }, function(err, foundOneFilm){
-            foundOneUser.characters.id(req.params.id).remove();
-            foundOneFilm.characters.id(req.params.id).remove();
-            foundOneUser.save(function(err, savedFoundOneUser) {
-              foundOneFilm.save(function(err, savedFoundOneFilm) {
-                    Films.findById(req.body.filmId, function(err, newFilm){
-                      newFilm.characters.push(updatedCharacter);
-                      foundOneUser.characters.push(updatedCharacter);
-                      foundOneUser.save(function(err, savedNewUser) {
-                        newFilm.save(function(err, savedNewFilm){
-                          res.redirect('/characters/' + req.params.id);
-                        });
-                      });
-                    });
+        foundOneUser.characters.id(req.params.id).remove();
+        foundOneFilm.characters.id(req.params.id).remove();
+        foundOneUser.save(function(err, savedFoundOneUser) {
+          foundOneFilm.save(function(err, savedFoundOneFilm) {
+            Films.findById(req.body.filmId, function(err, newFilm){
+              newFilm.characters.push(updatedCharacter);
+              foundOneUser.characters.push(updatedCharacter);
+              foundOneUser.save(function(err, savedNewUser) {
+                newFilm.save(function(err, savedNewFilm){
+                  res.redirect('/characters/' + req.params.id);
+                });
               });
             });
+          });
+        });
       });
     });
   });
