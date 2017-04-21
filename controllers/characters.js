@@ -60,6 +60,8 @@ router.post('/', function(req, res) {
     req.body.love = "None"
   } if (req.body.friends === "") {
     req.body.friends = "None"
+  } if (req.body.name === "") {
+    req.body.name = "?"
   }
   User.findById(req.body.userID, function(err, currentUser) {
     Films.findById(req.body.filmId, function(err, foundOneFilm){
