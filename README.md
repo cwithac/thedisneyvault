@@ -60,9 +60,8 @@ Build and explore the world of Disney's animated films and characters with The D
 + [Disney Terms of Use](https://disneytermsofuse.com/)
 + [The Walt Disney Company (Wikipedia)](https://en.wikipedia.org/wiki/The_Walt_Disney_Company)
 
-
-![](https://lh3.googleusercontent.com/s-HCXvBPtKcnkjpmiMLenbbb7-9hLJsrx6Ex0XhT5iCE_vStIXT4RGZpoF5B2IyrN24uSbHQUW9xZ_vxyhdsqUHma058rLzxia3d=s0 | width=200)
+![](https://lh3.googleusercontent.com/s-HCXvBPtKcnkjpmiMLenbbb7-9hLJsrx6Ex0XhT5iCE_vStIXT4RGZpoF5B2IyrN24uSbHQUW9xZ_vxyhdsqUHma058rLzxia3d=s0)
 
 ---
 
-Cathleen Wright, General Assembly, April 2017
+Cathleen Wright for [General Assembly](https://generalassemb.ly/), 2017
