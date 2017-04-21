@@ -53,14 +53,13 @@ Build and explore the world of Disney's animated films and characters with The D
 
 *For educational purposes only.*  
 
-*All images, films and characters property of [The Walt Disney Company](https://thewaltdisneycompany.com/).
-[The Disney Vault](https://en.wikipedia.org/wiki/Disney_Vault) is the term used by Walt Disney Studios Home Entertainment for its policy of putting home video releases of Walt Disney Animation Studios's animated features on moratorium.*
+*All images, films and characters property of [The Walt Disney Company](https://thewaltdisneycompany.com/).*
+
+*[The Disney Vault](https://en.wikipedia.org/wiki/Disney_Vault) is the term used by Walt Disney Studios Home Entertainment for its policy of putting home video releases of Walt Disney Animation Studios's animated features on moratorium.*
 
 + [Disney Studio Licensing](http://www.disneystudiolicensing.com/)
 + [Disney Terms of Use](https://disneytermsofuse.com/)
 + [The Walt Disney Company (Wikipedia)](https://en.wikipedia.org/wiki/The_Walt_Disney_Company)
-
-![](https://lh3.googleusercontent.com/s-HCXvBPtKcnkjpmiMLenbbb7-9hLJsrx6Ex0XhT5iCE_vStIXT4RGZpoF5B2IyrN24uSbHQUW9xZ_vxyhdsqUHma058rLzxia3d=s0)
 
 ---
 
