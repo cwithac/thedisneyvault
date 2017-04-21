@@ -2,7 +2,7 @@
 
 ### [Visit The Disney Vault : Hosted on Heroku](https://thedisneyvault.herokuapp.com/)
 
-Build and explore the world of Disney's animated films and characters with The Disney Vault.  Catalog and organize characters into their films globally.  View the site content at any time.  Sign in to add, edit and delete.
+Build and explore the world of Disney's animated films and characters with The Disney Vault.  Catalog and organize characters into their films.  View the site content at any time.  Sign in to add, update or delete.
 
 **Guest Sign In**:  username: guest | password: guest123
 
@@ -21,7 +21,7 @@ Build and explore the world of Disney's animated films and characters with The D
 + Mongo DB, Mongoose
 + OMDB API, AJAX
 + Javascript, jQuery
-+ MVC Structure | User, Films & Character Models
++ MVC Structure | Models - Users, Films & Characters
 + Partials: head, nav and footer
 + RESTful routes: Complete - Characters | Partial - Films, Users
 + bcrypt password encryption
@@ -35,7 +35,7 @@ Build and explore the world of Disney's animated films and characters with The D
 + User sees characters they have added (partial build in code).
 
 ### Upcoming Features
-+ Manual Add of Films.
++ Manual add of films option.
 + Hover name of images only on empty character profile pictures.
 + Link characters with tags outside of film (view all sidekicks, villains...).
 + Connect details between character pages (love interest to love interest).
