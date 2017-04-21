@@ -33,6 +33,7 @@ Build and explore the world of Disney's animated films and characters with The D
 + Ability to view/edit/delete user information.
 + Character with no content warning before adding with defaults.
 + User sees characters they have added (partial build in code).
++ Restrict users from seeing page with URL direct not logged in.
 
 ### Upcoming Features
 + Manual add of films option.
