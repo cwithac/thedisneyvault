@@ -32,6 +32,7 @@ Build and explore the world of Disney's animated films and characters with The D
 ### Implementation Priorities
 + Registration completes login.
 + Ability to view/edit/delete user information.
++ Character with no content warning before adding with defaults.
 + User sees characters they have added (partial build in code).
 
 ### Upcoming Features
@@ -52,9 +53,15 @@ Build and explore the world of Disney's animated films and characters with The D
 
 *For educational purposes only.*  
 
-*All images, films and characters property of The Walt Disney Company.
-The "[Disney Vault](https://en.wikipedia.org/wiki/Disney_Vault)" is the term used by Walt Disney Studios Home Entertainment for its policy of putting home video releases of Walt Disney Animation Studios's animated features on moratorium.*
-![The Walt Disney Company](http://logos-download.com/wp-content/uploads/2016/06/The_Walt_Disney_company_logo.png)
+*All images, films and characters property of [The Walt Disney Company](https://thewaltdisneycompany.com/).
+[The Disney Vault](https://en.wikipedia.org/wiki/Disney_Vault) is the term used by Walt Disney Studios Home Entertainment for its policy of putting home video releases of Walt Disney Animation Studios's animated features on moratorium.*
+
++ [Disney Studio Licensing](http://www.disneystudiolicensing.com/)
++ [Disney Terms of Use](https://disneytermsofuse.com/)
++ [The Walt Disney Company (Wikipedia)](https://en.wikipedia.org/wiki/The_Walt_Disney_Company)
+
+
+![](https://lh3.googleusercontent.com/s-HCXvBPtKcnkjpmiMLenbbb7-9hLJsrx6Ex0XhT5iCE_vStIXT4RGZpoF5B2IyrN24uSbHQUW9xZ_vxyhdsqUHma058rLzxia3d=s0 | width=200)
 
 ---
 
