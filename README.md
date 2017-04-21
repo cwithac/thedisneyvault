@@ -25,8 +25,7 @@ Build and explore the world of Disney's animated films and characters with The D
 + Partials: head, nav and footer
 + RESTful routes: Complete - Characters | Partial - Films, Users
 + bcrypt password encryption
-+ Skeleton Framework | CSS
-+ mobilefirst responsive design
++ Skeleton Framework | CSS | Responsive design
 ```
 
 ### Implementation Priorities
@@ -43,15 +42,13 @@ Build and explore the world of Disney's animated films and characters with The D
 + Share with social media.
 
 ### Known Issues
-+ OMDB data not exclusive to Disney and/or Disney animated.
++ OMDB data not exclusive to Disney and/or Disney animated films.
 + Duplicate data able to be added in both films and characters.
-+ No review or content validation of images for quality (site age rating).
-+ No character type username/password restriction.
-+ Film and character information not sorted (alphabetically, by date...).
++ No review or validation of images or content for quality (site age rating).
++ No username/password restriction.
++ Film and character information not sorted (alphabetically, by release date...) in view or in dropdown in add.
 
 ---
-
-*For educational purposes only.*  
 
 *All images, films and characters property of [The Walt Disney Company](https://thewaltdisneycompany.com/).*
 
@@ -62,5 +59,6 @@ Build and explore the world of Disney's animated films and characters with The D
 + [The Walt Disney Company (Wikipedia)](https://en.wikipedia.org/wiki/The_Walt_Disney_Company)
 
 ---
+*For educational purposes only.*  
 
 Cathleen Wright for [General Assembly](https://generalassemb.ly/), 2017
