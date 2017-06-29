@@ -6,6 +6,8 @@ Build and explore the world of Disney's animated films and characters with The D
 
 **Guest Sign In**:  username: guest | password: guest123
 
+**Note**: Due to the privatization of OMDb API, calls to add to the film model are no longer availalbe.  
+
 ![](http://i.imgur.com/vxnAs2v.png)
 
 ### View by Film
