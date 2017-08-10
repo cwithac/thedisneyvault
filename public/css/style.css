@@ -39,6 +39,13 @@ margin-top: 5%;
   margin-bottom: 100px;
 }
 
+.addchar {
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 0 0 30px 10px ghostwhite;
+  margin-top: 5%;
+  padding: 5%;
+}
+
 .h1big {
   font-size: 100px;
   margin-bottom: 0;
