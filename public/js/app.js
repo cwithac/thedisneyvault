@@ -24,7 +24,8 @@ $deleteButton.on('mouseleave', changedMind);
 //---------------------------------------
 //SEARCH BUTTON FINDS THROUGH ALL OMDB API
 
-var apiKey = config.API_KEY;
+// var apiKey = config.API_KEY;
+var apiKey = process.env.API_KEY;
 
 var findFilms = function() {
   console.log('Search Button Has Been Clicked');
