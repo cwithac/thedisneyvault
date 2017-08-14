@@ -23,13 +23,16 @@ $deleteButton.on('mouseleave', changedMind);
 //USES OMDBABI FOR ADD FILMS AND CONTENT:
 //---------------------------------------
 //SEARCH BUTTON FINDS THROUGH ALL OMDB API
+
+var apiKey = config.API_KEY;
+
 var findFilms = function() {
   console.log('Search Button Has Been Clicked');
   var $searchBox = $('#search-box');
   var $searchedValue = $searchBox.val();
   console.log("Searched Input:" + $searchedValue);
   var $searchResults = $('#search-results');
-  var apiKey = config.API_KEY;
+
   $.ajax('https://www.omdbapi.com/?s=' + $searchedValue + '&r=json&apikey=' + apiKey) //RETURNS DATA BASED ON SEARCH PARAM
 
   .done(function(filmsList) {
@@ -61,7 +64,7 @@ var findFilms = function() {
 
 var addButtonClicked = function() { //API ADD/POST FUNCTIONALITY ON CLICK OF 'SELECT FILM'
   console.log("imdbID: " + this.id);
-   $.ajax('https://www.omdbapi.com/?i=' + this.id + '&y=&plot=short&r=json&apikey' + apiKey)
+   $.ajax('https://www.omdbapi.com/?i=' + this.id + '&y=&plot=short&r=json&apikey=' + apiKey)
    .done(function(selectedFilm) {
      $.ajax({
         method: 'POST',
