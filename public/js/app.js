@@ -29,7 +29,8 @@ var findFilms = function() {
   var $searchedValue = $searchBox.val();
   console.log("Searched Input:" + $searchedValue);
   var $searchResults = $('#search-results');
-  $.ajax('https://www.omdbapi.com/?s=' + $searchedValue + '&r=json') //RETURNS DATA BASED ON SEARCH PARAM
+  var apiKey = config.API_KEY;
+  $.ajax('https://www.omdbapi.com/?s=' + $searchedValue + '&r=json&apikey=' + apiKey) //RETURNS DATA BASED ON SEARCH PARAM
 
   .done(function(filmsList) {
     console.log("JSON:");
@@ -60,7 +61,7 @@ var findFilms = function() {
 
 var addButtonClicked = function() { //API ADD/POST FUNCTIONALITY ON CLICK OF 'SELECT FILM'
   console.log("imdbID: " + this.id);
-   $.ajax('https://www.omdbapi.com/?i=' + this.id + '&y=&plot=short&r=json')
+   $.ajax('https://www.omdbapi.com/?i=' + this.id + '&y=&plot=short&r=json&apikey' + apiKey)
    .done(function(selectedFilm) {
      $.ajax({
         method: 'POST',
