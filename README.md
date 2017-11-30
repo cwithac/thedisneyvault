@@ -50,6 +50,7 @@ Build and explore the world of Disney's animated films and characters with The D
 
 
 ### Resources
+
 [OMDb API](http://www.omdbapi.com/)
 ---
 
