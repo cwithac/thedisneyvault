@@ -1,6 +1,6 @@
 # The Disney Vault
 
-### [Visit The Disney Vault : Hosted on Heroku](https://thedisneyvault.herokuapp.com/)
+### [Visit The Disney Vault : Hosted on Heroku](https://thedisneyvault.herokuapp.com/) ++ [Repo](https://github.com/cwithac/thedisneyvault)
 
 Build and explore the world of Disney's animated films and characters with The Disney Vault.  Catalog and organize characters into their films.  View the site content at any time.  Sign in to add, update or delete.
 
@@ -28,14 +28,13 @@ Build and explore the world of Disney's animated films and characters with The D
 + Skeleton Framework | CSS | Responsive design
 ```
 
-### Implementation Priorities
+### Upcoming Features Priorities
++ Update to ES6/7 and NPM Express Updates
 + Registration completes login.
 + Ability to view/edit/delete user information.
 + Character with no content warning before adding with defaults.
 + User sees characters they have added (partial build in code).
 + Restrict users from seeing page with URL direct not logged in.
-
-### Upcoming Features
 + Manual add of films option.
 + Hover name of images only on empty character profile pictures.
 + Link characters with tags outside of film (view all sidekicks, villains...).
