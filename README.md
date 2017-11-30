@@ -48,6 +48,9 @@ Build and explore the world of Disney's animated films and characters with The D
 + No username/password restriction.
 + Film and character information not sorted (alphabetically, by release date...) in view or in dropdown in add.
 
+
+### Resources
+[OMDb API](http://www.omdbapi.com/)
 ---
 
 *All images, films and characters property of [The Walt Disney Company](https://thewaltdisneycompany.com/).*
