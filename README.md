@@ -49,7 +49,7 @@ Build and explore the world of Disney's animated films and characters with The D
 + Film and character information not sorted (alphabetically, by release date...) in view or in dropdown in add.
 
 
-### ResourcesM
+### Resources
 [OMDb API](http://www.omdbapi.com/)
 
 ---
