@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/cwithac/thedisneyvault#readme",
   "dependencies": {
-    "bcrypt": "^1.0.2",
-    "body-parser": "^1.17.1",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
-    "express": "^4.15.2",
-    "express-session": "^1.15.2",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "hoek": "^5.0.3",
-    "method-override": "^2.3.8",
-    "mongoose": "^4.9.4"
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.5"
   }
 }
